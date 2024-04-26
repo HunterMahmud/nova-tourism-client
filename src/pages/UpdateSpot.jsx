@@ -1,78 +1,72 @@
-import React from "react";
+import { useLoaderData } from "react-router-dom";
+
 import { Helmet } from "react-helmet-async";
-import contextProvider from "./../components/contextProvider";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { ScrollRestoration } from "react-router-dom";
 import axios from "axios";
+const UpdateSpot = () => {
+  const spotInfo = useLoaderData();
+  // console.log(spotInfo);
+  const {
+    _id,
+    averageCost,
+    countryName,
+    description,
+    location,
+    photoURL,
+    seasonality,
+    spotName,
+    totalVisitor,
+    travelTime,
+  } = spotInfo;
 
-const AddTouristSpot = () => {
-  const { user } = contextProvider();
-  const { displayName, email } = user;
-  const defaultValues = {
-    displayName,
-    email: email || "not found",
-    location: "",
-    travelTime: "",
-    totalVisitor: 0,
-    description: "",
-    averageCost: 0,
-    travelTime: 0,
-    seasonality: "",
-    photoURL: "",
-    countryName: "",
-    spotName: "",
+  let defaultValues = {
+    location,
+    totalVisitor,
+    description,
+    averageCost,
+    travelTime,
+    seasonality,
+    photoURL,
+    countryName,
+    spotName,
   };
-
   const {
     register,
     handleSubmit,
-    reset,
-    formState: { isSubmitSuccessful },
+    formState: { isDirty, isSubmitSuccessful },
   } = useForm({
     defaultValues: {
       ...defaultValues,
     },
   });
 
-  const onSubmitSpot = (data) => {
-    // console.log(data);
-    const spotInfo = {
-      ...data,
-      averageCost: parseInt(data.averageCost),
-      travelTime: parseInt(data.travelTime),
-      totalVisitor: parseInt(data.totalVisitor),
-      displayName: displayName,
-      email: email || "not-found",
-    };
 
-    // console.log(spotInfo);
-
-    axios.post("http://localhost:5000/addSpot", spotInfo).then((res) => {
-      // console.log(res);
-      if (res.data?.insertedId) {
-        toast.success("Added Successfully");
-        //      reset({
-        //     ...defaultValues
-        // });
-      }
-    });
+  const onSubmitEdit = (updateInfo) => {
+    console.log(updateInfo);
+    axios
+      .patch(`http://localhost:5000/update/${_id}`, updateInfo)
+      .then((res) => {
+        // console.log(res);
+        if (res?.data?.modifiedCount > 0) {
+          toast.success("Info updated successfully");
+        }
+      });
   };
-
-  // console.log(user);
   return (
     <div className="mx-2">
       <Helmet>
-        <title>Add Tourist Spot | Nova Travel</title>
+        <title>Update Tourist Spot | Nova Travel</title>
       </Helmet>
       <ScrollRestoration />
       <h1
         data-aos="fade-down"
         className="text-3xl lg:text-5xl font-bold font-poppins text-center mt-7 my-3 text-gray-900"
       >
-        Add Tourist Spot
+        Update Tourist Spot
       </h1>
-      <p className="text-center">Fill the form to add your tourist spot.</p>
+      <p className="text-center">Edit the data to update your tourist spot.</p>
       <div className="max-w-7xl mx-auto">
         <div>
           <section
@@ -81,7 +75,7 @@ const AddTouristSpot = () => {
             className="p-6 my-10 lg:col-span-3 rounded-md text-black bg-card"
           >
             <form
-              onSubmit={handleSubmit(onSubmitSpot)}
+              onSubmit={handleSubmit(onSubmitEdit)}
               className="grid lg:grid-cols-2 lg:gap-3 mx-auto"
             >
               <div className="">
@@ -138,7 +132,7 @@ const AddTouristSpot = () => {
               </div>
               <div className="">
                 <label htmlFor="season" className="text-sm">
-                Seasonality
+                  Seasonality
                 </label>
                 <input
                   {...register("seasonality")}
@@ -200,36 +194,13 @@ const AddTouristSpot = () => {
                   className="w-full rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
                 ></textarea>
               </div>
-              <div className="">
-                <label htmlFor="name" className="text-sm">
-                  User Name
-                </label>
-                <input
-                  {...register("displayName")}
-                  id="name"
-                  type="text"
-                  disabled={true}
-                  placeholder="User Name"
-                  className="w-full p-2 disabled:cursor-not-allowed  rounded-md focus:ring focus:ring-opacity-75  text-gray-400 border border-gray-300"
-                />
-              </div>
 
-              <div className="">
-                <label htmlFor="email" className="text-sm">
-                  User Email
-                </label>
-                <input
-                  {...register("email")}
-                  id="email"
-                  type="email"
-                  disabled={true}
-                  placeholder="User Email"
-                  className="w-full p-2 disabled:cursor-not-allowed  rounded-md focus:ring focus:ring-opacity-75  text-gray-400 border border-gray-300  "
-                />
-              </div>
               <div className="flex justify-end py-4">
-                <button className="p-2 px-4 rounded-md text-gray-100 bg-violet-500 disabled:bg-violet-300 disabled:text-gray-400 disabled:cursor-not-allowed">
-                  Add
+                <button
+                  disabled={!isDirty}
+                  className="p-2 px-4 rounded-md text-gray-100 bg-violet-500 disabled:bg-violet-300 disabled:text-gray-400 disabled:cursor-not-allowed"
+                >
+                  Update
                 </button>
               </div>
             </form>
@@ -240,4 +211,4 @@ const AddTouristSpot = () => {
   );
 };
 
-export default AddTouristSpot;
+export default UpdateSpot;

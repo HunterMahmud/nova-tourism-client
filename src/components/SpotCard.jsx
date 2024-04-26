@@ -12,12 +12,9 @@ const SpotCard = ({ spot }) => {
     _id,
     averageCost,
     countryName,
-    description,
-    displayName,
-    email,
     location,
     photoURL,
-    seasionality,
+    seasonality,
     spotName,
     totalVisitor,
     travelTime,
@@ -34,42 +31,36 @@ const SpotCard = ({ spot }) => {
               className="object-cover w-full h-60 transition-transform  duration-1000 transform hover:scale-125 bg-white"
             />
           </div>
-       
+
           <div className="flex flex-col p-4">
-            <div className="flex justify-between text-sm mb-3 gap-2 items-center flex-wrap">
+            <div className=" text-sm mb-3 gap-2 items-center flex-wrap">
               <div className="flex gap-2 items-center capitalize">
                 <IoLocation />
                 <p>{location}</p>
               </div>
-              <div>
-                <p className="bg-green-600 text-white px-2 p-1 rounded-md font-bold uppercase font-poppins ">
-                 
-                  {countryName}
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <h2 className="mb-1 text-xl font-semibold capitalize">{spotName}</h2>
               
             </div>
-            <div className="flex flex-wrap justify-between mt-5">
-              <div className="flex flex-col gap-3">
-                <div className="flex items-center space-x-3">
-                  <span>Travel Time: {travelTime} days</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span>Total Visitor: {totalVisitor}/Year</span>
-                </div>
+            <div className="flex flex-col">
+              <h2 className="mb-1 text-xl font-semibold capitalize">
+                {spotName}
+              </h2>
+            </div>
+            <div className="flex flex-col gap-2 mt-5">
+              <div className="flex justify-between">
+                <p>Travel Time:</p>
+                <p> {travelTime} days</p>
               </div>
-              <div className="flex flex-col gap-3">
-                <div className="flex items-center space-x-3">
-                  <span>
-                    Average Cost: {averageCost}$
-                  </span>
-                </div>
-                <div className="flex items-center space-x-3 capitalize">
-                  <span>Season: {seasionality}</span>
-                </div>
+              <div className="flex justify-between">
+                <p>Total Visitor:</p>
+                <p> {totalVisitor}/Year</p>
+              </div>
+              <div className="flex justify-between">
+                <p> Average Cost: </p>
+                <p>{averageCost}$</p>
+              </div>
+              <div className="flex justify-between">
+                <p>Season: </p>
+                <p> {seasonality}</p>
               </div>
             </div>
             <div className="mt-3 w-full">

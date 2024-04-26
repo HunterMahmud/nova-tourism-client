@@ -101,7 +101,7 @@ const MyTouristSpot = () => {
                       >
                         <MdDeleteForever />{" "}
                       </button>
-                      <Link to="/">
+                      <Link to={`/update/${data._id}`}>
                         <button className="p-2 text-base bg-green-400 rounded-sm">
                           <FaEdit />
                         </button>
