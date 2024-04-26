@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import contextProvider from "./../components/contextProvider";
 import axios from "axios";
 import { useState } from "react";
-import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 
 const MyTouristSpot = () => {
   const { user } = contextProvider();
@@ -21,18 +21,33 @@ const MyTouristSpot = () => {
         setMySpotData(res.data);
       });
   }, [refetch]);
-  
-  const handleDelete = (id)=> {
+
+  const handleDelete = (id) => {
     // console.log(id);
-    axios.delete(`http://localhost:5000/deleteSpot/${id}`)
-    .then(res=>{
-        // console.log(res.data);
-        if(res.data.deletedCount>0){
-            toast.success('Delete Success')
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios.delete(`http://localhost:5000/deleteSpot/${id}`).then((res) => {
+          // console.log(res.data);
+          if (res.data.deletedCount > 0) {
+            Swal.fire({
+              title: "Deleted!",
+              text: "Your data has been deleted.",
+              icon: "success",
+            });
             setRefetch(!refetch);
-        }
-    })
-  }
+          }
+        });
+      }
+    });
+  };
   return (
     <div>
       <div className=" max-w-7xl p-2 mx-auto sm:p-4 text-gray-100 dark:text-gray-800">
@@ -81,10 +96,12 @@ const MyTouristSpot = () => {
                   <td className="p-3 text-right">
                     <span className="space-x-1">
                       <button
-                      onClick={()=> handleDelete(data._id)} className="p-2 text-base bg-red-400 rounded-sm">
+                        onClick={() => handleDelete(data._id)}
+                        className="p-2 text-base bg-red-400 rounded-sm"
+                      >
                         <MdDeleteForever />{" "}
                       </button>
-                      <Link to='/'>
+                      <Link to="/">
                         <button className="p-2 text-base bg-green-400 rounded-sm">
                           <FaEdit />
                         </button>
