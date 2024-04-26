@@ -31,7 +31,7 @@ const router = createBrowserRouter([
             },
             {
                 path:'/allspot/:id',
-                element: <SpotDetails/>,
+                element: <ProtectedRoute><SpotDetails/></ProtectedRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/allSpot/${params.id}`),
             },
             {

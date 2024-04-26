@@ -45,10 +45,7 @@ const SpotDetails = () => {
 
       <div className="mx-3 mb-40">
         <div className="max-w-7xl mx-auto">
-          <div
-            data-aos="fade-up"
-            className=" gap-5 mt-10 "
-          >
+          <div data-aos="fade-up" className=" gap-5 mt-10 ">
             <div className="title-and-text">
               <h1 className="text-3xl text-black font-bold font-poppins capitalize">
                 {spotName}
@@ -59,7 +56,9 @@ const SpotDetails = () => {
                   {" "}
                   <FaLocationDot />{" "}
                 </span>
-                <span className="capitalize">{location} | segment name</span>
+                <span className="capitalize">
+                  {location} | {countryName}
+                </span>
               </p>
             </div>
             <div className="w-full relative">
@@ -78,7 +77,7 @@ const SpotDetails = () => {
               data-aos-delay="200"
               className="text-2xl text-black font-bold  mt-10 uppercase font-poppins"
             >
-              Descriptions {'&'} Details
+              Descriptions {"&"} Details
             </h3>
 
             <p
@@ -90,7 +89,11 @@ const SpotDetails = () => {
             </p>
           </div>
 
-          <div className=" text-gray-800 rounded-md mt-5 w-full font-bold font-poppins">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className=" text-gray-800 rounded-md mt-5 w-full font-bold font-poppins"
+          >
             <div className="overflow-x-auto max-w-[600px]">
               <table className="table">
                 <tbody>
@@ -98,7 +101,7 @@ const SpotDetails = () => {
                     <td>Spot ID</td>
                     <td>{_id}</td>
                   </tr>
-                 
+
                   <tr>
                     <td>Country Name</td>
                     <td className="capitalize">{countryName}</td>
@@ -115,7 +118,7 @@ const SpotDetails = () => {
                     <td>Seasonality</td>
                     <td className="capitalize">{seasonality}</td>
                   </tr>
-                 
+
                   <tr>
                     <td>Average Cost</td>
                     <td>{averageCost}$ /Person</td>
@@ -128,14 +131,21 @@ const SpotDetails = () => {
                     <td>Total Visitors</td>
                     <td className="capitalize">{totalVisitor} /year</td>
                   </tr>
-                  
                 </tbody>
               </table>
             </div>
           </div>
 
-          <div className="flex justify-start items-center my-5">
-           hello
+          <div className=" my-5">
+            <h1 data-aos="fade-up"
+              data-aos-delay="200"
+              className="text-2xl text-black font-bold  mt-10 uppercase font-poppins">Contact info</h1>
+            <div data-aos="fade-up"
+              data-aos-delay="200"
+              className="text-base text-black font-bold  mt-10 font-poppins">
+              <p>Name: {displayName}</p>
+              <a href={`mailto:${email}`}> Email: {email}</a>
+            </div>
           </div>
         </div>
       </div>
@@ -145,71 +155,3 @@ const SpotDetails = () => {
 
 export default SpotDetails;
 
-// import React from 'react';
-// import { useLoaderData } from 'react-router-dom';
-
-// const SpotDetails = () => {
-//     const spot = useLoaderData()
-//     console.log(spot);
-//     return (
-//         <div>
-//             spot details
-//         </div>
-//     );
-// };
-
-// export default SpotDetails;
-
-/*
-
-<div className="bg-card text-gray-800 rounded-md mt-5 w-full font-bold font-poppins">
-                  <div className="overflow-x-auto">
-                    <table className="table">
-                      <tbody>
-                        <tr>
-                          <td>Property ID</td>
-                          <td>{id}</td>
-                        </tr>
-                        <tr>
-                          <td>Area Type</td>
-                          <td>{area_description}</td>
-                        </tr>
-                        <tr>
-                          <td>Year of Build</td>
-                          <td>{year_of_build}</td>
-                        </tr>
-                        <tr>
-                          <td>Total Area</td>
-                          <td>{area}</td>
-                        </tr>
-                        <tr>
-                          <td>Number of Rooms</td>
-                          <td>
-                            {parseInt(facilities[0].split(" ")[0]) +
-                              parseInt(facilities[1].split(" ")[0])}
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Number of Bedrooms</td>
-                          <td>{facilities[0].split(" ")[0]}</td>
-                        </tr>
-                        <tr>
-                          <td>Number of Bathrooms</td>
-                          <td>{facilities[1].split(" ")[0]}</td>
-                        </tr>
-                        <tr>
-                          <td>Parking Facilities</td>
-                          <td>{parking_facilities}</td>
-                        </tr>
-                        {facilities.slice(2).map((facility, i) => (
-                          <tr key={i}>
-                            <td className="capitalize">{facility}</td>
-                            <td>Yes</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-
-*/

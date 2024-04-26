@@ -1,11 +1,6 @@
 import { IoLocation } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import {
-  FaVectorSquare,
-  FaBed,
-  FaCircleDollarToSlot,
-  FaBath,
-} from "react-icons/fa6";
+
 const SpotCard = ({ spot }) => {
   //   console.log(spot);
   const {
