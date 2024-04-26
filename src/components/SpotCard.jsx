@@ -37,19 +37,19 @@ const SpotCard = ({ spot }) => {
        
           <div className="flex flex-col p-4">
             <div className="flex justify-between text-sm mb-3 gap-2 items-center flex-wrap">
-              <div className="flex gap-2 items-center">
+              <div className="flex gap-2 items-center capitalize">
                 <IoLocation />
                 <p>{location}</p>
               </div>
               <div>
-                <p className="bg-green-600 text-white px-2 p-1 rounded-md font-bold uppercase font-poppins">
+                <p className="bg-green-600 text-white px-2 p-1 rounded-md font-bold uppercase font-poppins ">
                  
                   {countryName}
                 </p>
               </div>
             </div>
             <div className="flex flex-col">
-              <h2 className="mb-1 text-xl font-semibold">{spotName}</h2>
+              <h2 className="mb-1 text-xl font-semibold capitalize">{spotName}</h2>
               
             </div>
             <div className="flex flex-wrap justify-between mt-5">
@@ -67,7 +67,7 @@ const SpotCard = ({ spot }) => {
                     Average Cost: {averageCost}$
                   </span>
                 </div>
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-3 capitalize">
                   <span>Season: {seasionality}</span>
                 </div>
               </div>
