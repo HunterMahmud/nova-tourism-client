@@ -10,20 +10,27 @@ import "swiper/css/autoplay";
 
 // import required modules
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
-import { Link } from 'react-router-dom';
-
+import { Link } from "react-router-dom";
 
 const Slider = () => {
   return (
     <div className="relative">
-      <div data-aos="fade-right" className="absolute top-1/3 left-12 md:left-20 w-[70%]  z-10">
+      <div
+        data-aos="fade-right"
+        className="absolute top-[40%] left-12 md:left-20 w-[70%]  z-10"
+      >
         <div className=" h-[40%] max-w-[900px] text-white p-5">
           <h1 className="text-2xl md:text-5xl uppercase font-poppins ">
-            Real Estate Residential services {'&'} promotions{" "}
+            Find your next Tourist Spot{" "}
           </h1>
           <div className="flex items-center gap-3">
             <span className="text-[35px] md:text-[50px] ">&rarr;</span>
-            <Link to='/properties' className="uppercase mt-2 p-2 border border-blue-500 rounded-md text-sm lg:text-base">explore more</Link>
+            <Link
+              to="/properties"
+              className="uppercase mt-2 p-2 border border-blue-500 rounded-md text-sm lg:text-base"
+            >
+              explore more
+            </Link>
           </div>
         </div>
       </div>
@@ -40,7 +47,7 @@ const Slider = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-        <div
+          <div
             className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://source.unsplash.com/green-trees-on-mountain-under-white-clouds-during-daytime-_vL6mbbHZkI")] bg-center bg-no-repeat`}
           ></div>
         </SwiperSlide>

@@ -10,6 +10,7 @@ import Register from './../pages/Register';
 import AddTouristSpot from './../pages/AddTouristSpot';
 import MyTouristSpot from '../pages/MyTouristSpot';
 import ProtectedRoute from '../components/ProtectedRoute';
+import SpotDetails from '../pages/SpotDetails';
 
 const router = createBrowserRouter([
     {
@@ -24,6 +25,12 @@ const router = createBrowserRouter([
             {
                 path:'/allspot',
                 element: <AllTouristSpot/>,
+                loader: ()=> fetch('http://localhost:5000/allSpot')
+            },
+            {
+                path:'/allspot/:id',
+                element: <SpotDetails/>,
+                loader: ({params}) => fetch(`http://localhost:5000/allSpot/${params.id}`),
             },
             {
                 path: '/addspot',

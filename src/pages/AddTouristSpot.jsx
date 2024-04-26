@@ -39,6 +39,9 @@ const AddTouristSpot = () => {
     // console.log(data);
     const spotInfo = {
       ...data,
+      averageCost: parseInt(data.averageCost),
+      travelTime: parseInt(data.travelTime),
+      totalVisitor: parseInt(data.totalVisitor),
       displayName: displayName,
       email: email || "not found",
     };
@@ -48,7 +51,7 @@ const AddTouristSpot = () => {
     axios.post("http://localhost:5000/addSpot", spotInfo).then((res) => {
       console.log(res);
       if (res.data?.insertedId) {
-        toast.success("Info Added Successfully");
+        toast.success("Added Successfully");
         //      reset({
         //     ...defaultValues
         // });
