@@ -6,7 +6,7 @@ const NotFound = () => {
   return (
     <section className="flex items-center min-h-screen p-16 bg-main text-gray-100">
       <Helmet>
-        <title>Not Found | Nova Estate</title>
+        <title>Not Found | Nova Travel</title>
       </Helmet>
       <ScrollRestoration />
       <div

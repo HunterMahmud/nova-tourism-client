@@ -11,6 +11,7 @@ import AddTouristSpot from './../pages/AddTouristSpot';
 import MyTouristSpot from '../pages/MyTouristSpot';
 import ProtectedRoute from '../components/ProtectedRoute';
 import SpotDetails from '../pages/SpotDetails';
+import AboutUs from '../pages/AboutUs';
 
 const router = createBrowserRouter([
     {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
                 path: '/mylist',
                 element:<ProtectedRoute> <MyTouristSpot/></ProtectedRoute>,
             
+            },
+            {
+                path:'/aboutus',
+                element: <AboutUs/>
             },
             {
                 path:'/login',

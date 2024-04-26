@@ -50,7 +50,7 @@ const Register = () => {
   return (
     <div className="mx-2">
       <Helmet>
-        <title>Register | Nova Estate</title>
+        <title>Register | Nova Travel</title>
       </Helmet>
       <ScrollRestoration />
       <div

@@ -13,18 +13,18 @@ const Footer = () => {
               <img
                 className="rounded-full"
                 src="https://i.ibb.co/n1cFnnS/nova-state.jpg"
-                alt="Nova Estate"
+                alt="Nova Travel"
               />
             </div>
             <span className="self-center font-bugrasimo text-2xl font-semibold">
-              Nova Estate
+              Nova Travel
             </span>
           </Link>
         </div>
         <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
           <div className="space-y-3">
             <h3 className="tracking-wide font-bugrasimo font-semibold uppercase text-gray-50">
-              Real Estate Services
+              All Travel Services
             </h3>
             <ul className="space-y-1">
               <li>
@@ -140,7 +140,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="py-6 text-sm text-center text-gray-400">
-        © 2024 Nova Estate All rights reserved.
+        © 2024 Nova Travel All rights reserved.
       </div>
     </footer>
   );

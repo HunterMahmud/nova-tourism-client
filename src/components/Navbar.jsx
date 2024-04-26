@@ -73,7 +73,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost text-xl md:text-2xl lg:text-3xl hover:bg-violet-500 font-bugrasimo hover:text-white  text-black -ml-3 md:ml-3 px-1 md:px-3">
-          Nova Estate
+          Nova Travel
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">

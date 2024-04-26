@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div>
             <Helmet>
-                <title>Home | Nova Estate</title>
+                <title>Home | Nova Travel</title>
             </Helmet>
             <Slider/>
            {/* <EstatePage/> */}

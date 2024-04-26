@@ -26,7 +26,7 @@ const Slider = () => {
           <div className="flex items-center gap-3">
             <span className="text-[35px] md:text-[50px] ">&rarr;</span>
             <Link
-              to="/properties"
+              to="/allspot"
               className="uppercase mt-2 p-2 border border-blue-500 rounded-md text-sm lg:text-base"
             >
               explore more
@@ -77,19 +77,3 @@ const Slider = () => {
 };
 
 export default Slider;
-
-/**
- * 
- * 
-
-https://source.unsplash.com/white-and-brown-quatrefoil-bedspread-set-on-bed-near-window-8xAn1QJU7gk
-https://source.unsplash.com/a-porch-with-two-chairs-and-a-table-on-it-XcVm8mn7NUM
-https://source.unsplash.com/round-clear-glass-top-table-and-five-gray-chairs-dining-se-9rYfG8sWRVo
-https://source.unsplash.com/living-room-interior-6japTIjUQoI
-https://source.unsplash.com/white-and-brown-concrete-building-b_79nOqf95I
-https://source.unsplash.com/a-white-house-sitting-in-the-middle-of-a-forest-5uiqnRQjEVo
-https://source.unsplash.com/low-angle-view-of-building-wR11KBaB86U
-https://source.unsplash.com/white-and-brown-concrete-building-under-blue-sky-during-daytime-_TPTXZd9mOo
-
-
- */
