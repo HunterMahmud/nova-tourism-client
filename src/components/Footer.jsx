@@ -29,12 +29,12 @@ const Footer = () => {
             <ul className="space-y-1">
               <li>
                 <a rel="noopener noreferrer" href="#">
-                  Property Management
+                  Tourism Management
                 </a>
               </li>
               <li>
                 <a rel="noopener noreferrer" href="#">
-                  Rental Services
+                  Travel Services
                 </a>
               </li>
               <li>
