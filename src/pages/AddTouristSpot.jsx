@@ -18,7 +18,7 @@ const AddTouristSpot = () => {
     description: "",
     averageCost: 0,
     travelTime: 0,
-    seasionality: "",
+    seasonality: "",
     photoURL: "",
     countryName: "",
     spotName: "",
@@ -46,10 +46,10 @@ const AddTouristSpot = () => {
       email: email || "not found",
     };
 
-    console.log(spotInfo);
+    // console.log(spotInfo);
 
     axios.post("http://localhost:5000/addSpot", spotInfo).then((res) => {
-      console.log(res);
+      // console.log(res);
       if (res.data?.insertedId) {
         toast.success("Added Successfully");
         //      reset({
@@ -138,10 +138,10 @@ const AddTouristSpot = () => {
               </div>
               <div className="">
                 <label htmlFor="season" className="text-sm">
-                  Seasionality
+                Seasonality
                 </label>
                 <input
-                  {...register("seasionality")}
+                  {...register("seasonality")}
                   id="season"
                   type="text"
                   required={true}
