@@ -13,11 +13,11 @@ const Home = () => {
       <Helmet>
         <title>Home | Nova Travel</title>
       </Helmet>
-      <Slider />
+      {/* <Slider /> */}
 
-      <TouristSpotHome />
+      {/* <TouristSpotHome /> */}
       <CountriesSection/>
-      <TouristGallery />
+      {/* <TouristGallery /> */}
       
     </div>
   );
