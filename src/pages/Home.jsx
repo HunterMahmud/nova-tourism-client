@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import TouristGallery from '../components/TouristGallery';
 import Slider from './../components/Slider';
 // import SmartHourseGallery from './../components/SmartHourseGallery';
 // import TrustedByCompany from '../components/TrustedByCompany';
@@ -12,7 +13,7 @@ const Home = () => {
             </Helmet>
             <Slider/>
            {/* <EstatePage/> */}
-           {/* <SmartHourseGallery/> */}
+           <TouristGallery/>
            {/* <TrustedByCompany/> */}
         </div>
     );
