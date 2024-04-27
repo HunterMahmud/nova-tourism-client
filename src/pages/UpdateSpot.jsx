@@ -42,7 +42,6 @@ const UpdateSpot = () => {
     },
   });
 
-
   const onSubmitEdit = (updateInfo) => {
     console.log(updateInfo);
     axios
@@ -95,14 +94,20 @@ const UpdateSpot = () => {
                 <label htmlFor="cname" className="text-sm">
                   Country Name
                 </label>
-                <input
+                <select
                   {...register("countryName")}
                   id="cname"
                   type="text"
                   required={true}
-                  placeholder="Ex: Bangladesh"
                   className="w-full rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
-                />
+                >
+                  <option value="Bangladesh">Bangladesh</option>
+                  <option value="Indonesia">Indonesia</option>
+                  <option value="Cambodia">Cambodia</option>
+                  <option value="Thailand">Thailand</option>
+                  <option value="Malaysia">Malaysia</option>
+                  <option value="Vietnam">Vietnam</option>
+                </select>
               </div>
               <div className="">
                 <label htmlFor="location" className="text-sm">

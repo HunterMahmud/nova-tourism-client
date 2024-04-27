@@ -46,7 +46,7 @@ const AddTouristSpot = () => {
       email: email || "not-found",
     };
 
-    // console.log(spotInfo);
+    console.log(spotInfo);
 
     axios.post("http://localhost:5000/addSpot", spotInfo).then((res) => {
       // console.log(res);
@@ -72,7 +72,9 @@ const AddTouristSpot = () => {
       >
         Add Tourist Spot
       </h1>
-      <p data-aos="fade-down" data-aos-delay={100} className="text-center">Fill the form to add your tourist spot.</p>
+      <p data-aos="fade-down" data-aos-delay={100} className="text-center">
+        Fill the form to add your tourist spot.
+      </p>
       <div className="max-w-7xl mx-auto">
         <div>
           <section
@@ -101,14 +103,31 @@ const AddTouristSpot = () => {
                 <label htmlFor="cname" className="text-sm">
                   Country Name
                 </label>
-                <input
+                
+                <select 
+                 {...register("countryName")}
+                 id="cname"
+                  type="text"
+                  required={true}
+                  className="w-full rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
+                >
+                  <option value="Bangladesh">Bangladesh</option>
+                  <option value="Indonesia">Indonesia</option>
+                  <option value="Cambodia">Cambodia</option>
+                  <option value="Thailand">Thailand</option>
+                  <option value="Malaysia">Malaysia</option>
+                  <option value="Vietnam">Vietnam</option>
+                  
+                </select>
+                {/* <input
                   {...register("countryName")}
                   id="cname"
                   type="text"
                   required={true}
                   placeholder="Ex: Bangladesh"
                   className="w-full rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
-                />
+                /> */}
+                
               </div>
               <div className="">
                 <label htmlFor="location" className="text-sm">
@@ -138,7 +157,7 @@ const AddTouristSpot = () => {
               </div>
               <div className="">
                 <label htmlFor="season" className="text-sm">
-                Seasonality
+                  Seasonality
                 </label>
                 <input
                   {...register("seasonality")}
