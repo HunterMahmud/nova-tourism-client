@@ -50,9 +50,17 @@ const MyTouristSpot = () => {
   };
   return (
     <div>
+      
       <div className=" max-w-7xl p-2 mx-auto sm:p-4 text-gray-100 dark:text-gray-800">
-        <h2 className="mb-4 text-2xl font-semibold leading-tight">Your List</h2>
-        <div className="overflow-x-auto">
+      <h1
+        data-aos="fade-down"
+        className="text-3xl lg:text-5xl font-bold font-poppins text-center mt-7 my-3 text-gray-900"
+      >
+        Your Tourist Spot
+      </h1>
+      <p className="text-center">All your tourist spot here.</p>
+      
+        <div className="overflow-x-auto mt-7">
           <table className="min-w-full text-xs">
             <colgroup>
               <col />
@@ -76,7 +84,7 @@ const MyTouristSpot = () => {
               {mySpotData.map((data, index) => (
                 <tr
                   key={data._id}
-                  className="border-b border-opacity-20 border-gray-700 dark:border-gray-300 bg-gray-900 dark:bg-gray-50"
+                  className="border-b border-opacity-20 border-gray-700 dark:border-gray-300 bg-gray-900 dark:bg-gray-50 font-bold"
                 >
                   <td className="p-3">
                     <p>{index + 1}</p>
