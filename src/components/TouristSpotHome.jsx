@@ -19,7 +19,7 @@ const TouristSpotHome = () => {
         <title>All Tourist Spot | Nova Travel</title>
       </Helmet>
       <ScrollRestoration />
-     <div className="max-w-7xl mx-auto ">
+     <div className="max-w-7xl mx-auto "> 
      <h1
         data-aos="fade-down"
         data-aos-delay={100}

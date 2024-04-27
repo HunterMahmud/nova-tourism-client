@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import CountriesSection from "../components/CountriesSection";
 import TouristGallery from "../components/TouristGallery";
 import TouristSpotHome from "../components/TouristSpotHome";
 import Slider from "./../components/Slider";
@@ -15,8 +16,9 @@ const Home = () => {
       <Slider />
 
       <TouristSpotHome />
+      <CountriesSection/>
       <TouristGallery />
-      {/* <TrustedByCompany/> */}
+      
     </div>
   );
 };
