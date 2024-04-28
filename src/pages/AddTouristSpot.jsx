@@ -54,9 +54,9 @@ const AddTouristSpot = () => {
       // console.log(res);
       if (res.data?.insertedId) {
         toast.success("Added Successfully");
-        //      reset({
-        //     ...defaultValues
-        // }); 
+             reset({
+            ...defaultValues
+        }); 
       }
     });
   };
