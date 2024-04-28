@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import axios from "axios";
+import { Tooltip } from "react-tooltip";
 
 const CountryCard = ({ country }) => {
   // console.log(country.photo);
-  const photo = `bg-[linear-gradient(45deg,rgba(0,0,0,0.6),rgba(0,0,0,0.2)),url('${country.photo}')]`
-  console.log(photo);
+  const photo = `bg-[linear-gradient(45deg,rgba(0,0,0,0.6),rgba(0,0,0,0.2)),url('${country.photo}')]`;
+  // console.log(photo);
   // console.log(spot);
 
   //   const {
@@ -24,13 +25,18 @@ const CountryCard = ({ country }) => {
     <div data-aos="fade-up" className="mx-2">
       <div className="flex flex-col max-w-lg mx-auto space-y-6 overflow-hidden rounded-md border border-gray-100/25 hover:shadow-[20px,20px,20px,5px,rgba(255,250,255,0.01)] shadow-xl bg-main text-black">
         {/* start  */}
-        <img src={country.photo} alt="" />
+
         <Link
           to={`/${country._id}`}
-          className={`flex flex-col gap-3 items-center justify-center text-white bg-center bg-no-repeat bg-cover object-cover transition-transform  duration-1000 transform hover:scale-105 bg-white overflow-hidden ${photo} relative w-full h-[400px]`}
+          style={{
+            backgroundImage: `linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('${country.photo}')`,
+          }}
+          className={`flex flex-col gap-3 items-center justify-center text-white bg-center bg-no-repeat bg-cover object-cover transition-transform  duration-1000 transform hover:scale-105 bg-white overflow-hidden h-[300px]`}
         >
           <h1 className="text-2xl font-bugrasimo">{country._id}</h1>
-          <p className="text-sm font-poppins w-[90%] text-center">{country.desc}</p>
+          <p className="text-sm font-poppins w-[90%] text-center">
+            {country.desc}
+          </p>
         </Link>
         {/* ends here */}
       </div>

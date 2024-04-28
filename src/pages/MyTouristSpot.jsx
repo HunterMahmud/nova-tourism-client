@@ -3,6 +3,7 @@ import { MdDeleteForever } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import contextProvider from "./../components/contextProvider";
+import { Tooltip } from "react-tooltip";
 import axios from "axios";
 import { useState } from "react";
 import Swal from "sweetalert2";
@@ -48,18 +49,24 @@ const MyTouristSpot = () => {
       }
     });
   };
+  if (mySpotData.length == 0) {
+    return (
+      <div className="flex items-center justify-center h-[calc(100vh-300px)]">
+        <h1 className="font-bugrasimo text-2xl">Not found any data</h1>
+      </div>
+    );
+  }
   return (
     <div>
-      
       <div className=" max-w-7xl p-2 mx-auto sm:p-4 text-gray-100 dark:text-gray-800">
-      <h1
-        data-aos="fade-down"
-        className="text-3xl lg:text-5xl font-bold font-poppins text-center mt-7 my-3 text-gray-900"
-      >
-        Your Tourist Spot
-      </h1>
-      <p className="text-center">All your tourist spot here.</p>
-      
+        <h1
+          data-aos="fade-down"
+          className="text-3xl lg:text-5xl font-bold font-poppins text-center mt-7 my-3 text-gray-900"
+        >
+          Your Tourist Spot
+        </h1>
+        <p className="text-center">All your tourist spot here.</p>
+
         <div className="overflow-x-auto mt-7">
           <table className="min-w-full text-xs">
             <colgroup>
@@ -104,14 +111,37 @@ const MyTouristSpot = () => {
                   <td className="p-3 text-right">
                     <span className="space-x-1">
                       <button
+                      data-tooltip-id="delete-tooltip"
+                      data-tooltip-content="Delete?"
+                      data-tooltip-place="top"
                         onClick={() => handleDelete(data._id)}
                         className="p-2 text-base bg-red-400 rounded-sm"
                       >
-                        <MdDeleteForever />{" "}
+                        <MdDeleteForever
+                          
+                        />{" "}
+                        <Tooltip
+                          style={{
+                            backgroundColor: "rgb(248, 110, 110)",
+                            color: "#fff",
+                          }}
+                          id="delete-tooltip"
+                        />
                       </button>
                       <Link to={`/update/${data._id}`}>
-                        <button className="p-2 text-base bg-green-400 rounded-sm">
+                        <button
+                        data-tooltip-id="edit-tooltip"
+                        data-tooltip-content="Edit?"
+                        data-tooltip-place="top"
+                         className="p-2 text-base bg-green-400 rounded-sm">
                           <FaEdit />
+                          <Tooltip
+                          style={{
+                            backgroundColor: "rgb(74, 222, 128)",
+                            color: "#fff",
+                          }}
+                          id="edit-tooltip"
+                        />
                         </button>
                       </Link>
                     </span>
