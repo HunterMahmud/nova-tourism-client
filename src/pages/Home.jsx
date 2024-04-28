@@ -4,9 +4,6 @@ import CountriesSection from "../components/CountriesSection";
 import TouristGallery from "../components/TouristGallery";
 import TouristSpotHome from "../components/TouristSpotHome";
 import Slider from "./../components/Slider";
-// import SmartHourseGallery from './../components/SmartHourseGallery';
-// import TrustedByCompany from '../components/TrustedByCompany';
-import { IoCall } from 'react-icons/io5';
 import WhatPeopleSay from "../components/WhatPeopleSay";
 
 const Home = () => {

@@ -1,8 +1,6 @@
 import axios from "axios";
 import React from "react";
 import { useEffect, useState } from "react";
-import { Helmet } from "react-helmet-async";
-import { ScrollRestoration } from "react-router-dom";
 import SpotCard from "./SpotCard";
 
 const TouristSpotHome = () => {
@@ -11,7 +9,7 @@ const TouristSpotHome = () => {
   useEffect(() => {
     setLoading(true);
     axios.get("https://nova-tourism-server.vercel.app/countrySpot").then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       setSpotInfo(res.data);
       setLoading(false);
     });
@@ -19,10 +17,7 @@ const TouristSpotHome = () => {
   if(loading) {return <div className="w-full min-h-[calc(100vh-349px)] flex items-center justify-center"><span className="loading loading-spinner loading-lg"></span></div>;}
   return (
     <div className="mt-10">
-      <Helmet>
-        <title>All Tourist Spot | Nova Travel</title>
-      </Helmet>
-      <ScrollRestoration />
+      
      <div className="max-w-7xl mx-auto "> 
      <h1
         data-aos="fade-down"

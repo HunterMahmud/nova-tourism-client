@@ -20,7 +20,7 @@ const MyTouristSpot = () => {
       .get(`https://nova-tourism-server.vercel.app/mylist/${user.email}`)
 
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setMySpotData(res.data);
         setLoading(false);
       });

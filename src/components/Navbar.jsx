@@ -2,9 +2,23 @@ import { Link, NavLink } from "react-router-dom";
 import contextProvider from "./contextProvider";
 import { toast } from "react-toastify";
 import { FiSun, FiMoon } from "react-icons/fi";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Navbar = () => {
+  const [theme, setTheme] = useState("light");
   const { user, logOut } = contextProvider();
+  useEffect(() => {
+    const localTheme = localStorage.getItem("theme");
+    if (localTheme) {
+      setTheme(localTheme);
+    } else {
+      localStorage.setItem("theme", theme);
+    }
+    document.querySelector("html").setAttribute("class", localTheme);
+  }, [theme]);
+
+
 
   const links = (
     <>
@@ -47,7 +61,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink className="text-lg" to="/register">
-             Register
+              Register
             </NavLink>
           </li>
         </>
@@ -66,7 +80,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="text-black bg-card">
+    <div className="text-black dark:text-white bg-card dark:bg-gray-500">
       <div className="navbar sm:w-[97%] sm:mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -95,7 +109,7 @@ const Navbar = () => {
           </div>
           <Link
             to="/"
-            className="btn btn-ghost text-xl md:text-2xl lg:text-3xl hover:bg-violet-500 font-bugrasimo hover:text-white  text-black -ml-3 md:ml-3 px-1 md:px-3"
+            className="btn btn-ghost text-xl md:text-2xl lg:text-3xl hover:bg-violet-500 font-bugrasimo hover:text-white -ml-3 md:ml-3 px-1 md:px-3"
           >
             Nova Travel
           </Link>
@@ -103,12 +117,23 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 space-x-3">{links}</ul>
         </div>
-        {/* <div className="text-black">
-      <FiSun/> 
-        <FiMoon/>
-      </div> */}
+
         <div className="navbar-end">
-          <div className="flex gap-3">
+          <div className="flex items-center gap-3">
+            <div className="text-black">
+              <button className="text-2xl bg-gray-300 hover:bg-gray-400 p-2 rounded-full">
+                {theme == "dark" ? (
+                  <FiSun onClick={() => {
+                    localStorage.setItem("theme", "light");
+                    return setTheme("light")
+                  }} />
+                ) : (
+                  <FiMoon onClick={() => {
+                    localStorage.setItem("theme","dark");
+                    return setTheme("dark")}} />
+                )}
+              </button>
+            </div>
             {user ? (
               <>
                 <img

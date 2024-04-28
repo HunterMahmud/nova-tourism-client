@@ -48,7 +48,7 @@ const Slider = () => {
                 "Uncover New Destinations",
                 "Experience Exciting Travel",
               ]}
-              loop={5}
+              loop={0}
               cursor
               cursorStyle="_"
               typeSpeed={70}

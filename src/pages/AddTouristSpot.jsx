@@ -65,7 +65,7 @@ const AddTouristSpot = () => {
   return (
     <div className="mx-2">
       <Helmet>
-        <title>All Tourist Spot | Nova Travel</title>
+        <title>Add Tourist Spot | Nova Travel</title>
       </Helmet>
       <ScrollRestoration />
       <h1
