@@ -5,12 +5,11 @@ import { Helmet } from "react-helmet-async";
 import axios from "axios";
 
 const AllTouristSpot = () => {
-  const loadedSpotInfo = useLoaderData();
   const [loading, setLoading] = useState(true);
  
   // console.log(JSON.stringify(spotInfo));
   const [sortOrder, setSortOrder] = useState(0);
-  const [spotInfo, setSpotInfo] = useState(loadedSpotInfo);
+  const [spotInfo, setSpotInfo] = useState();
   useEffect(() => {
     setLoading(true);
     if (sortOrder == 1) {

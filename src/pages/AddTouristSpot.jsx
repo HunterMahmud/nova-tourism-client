@@ -74,7 +74,7 @@ const AddTouristSpot = () => {
       >
         Add Tourist Spot
       </h1>
-      <p data-aos="fade-down" data-aos-delay={100} className="text-center dark:text-gray-200">
+      <p data-aos="fade-down" data-aos-delay={100} className="text-center text-gray-800 dark:text-gray-200">
         Fill the form to add your tourist spot.
       </p>
       <div className="max-w-7xl mx-auto">
