@@ -12,40 +12,41 @@ import { db } from "./../Firebase/firebase.config";
 import { icon } from "leaflet";
 import axios from "axios";
 import { useEffect } from "react";
+import WhatPeopleSay from "../components/WhatPeopleSay";
 
 const ICON = icon({
   iconUrl: "https://unpkg.com/leaflet@1.9.3/dist/images/marker-icon-2x.png",
   iconSize: [20, 32],
 });
-  //this is the desc i added to the database
-  // const ct1 = {
-  //   Bangladesh:
-  //     "Explore Sundarbans' mangrove forests, Cox's Bazar's sandy beaches, and Srimangal's lush tea gardens.",
-  //   Thailand:
-  //     "Discover Bangkok's Grand Palace, Phi Phi Islands' pristine beaches, and Chiang Mai's vibrant night bazaar.",
-  //   Indonesia:
-  //     "Encounter Borobudur's ancient temple, Bali's cultural charm, and Komodo's legendary dragons.",
-  //   Malaysia:
-  //     "Experience Kuala Lumpur's Petronas Towers, Langkawi's scenic beauty, and Taman Negara's rainforest adventures.",
-  //   Vietnam:
-  //     "Cruise Ha Long Bay's limestone karsts, wander Hoi An's ancient streets, and explore the Mekong Delta's waterways.",
-  //   Cambodia:
-  //     "Witness Angkor Wat's majestic temples, shop at Siem Reap's night market, and relax on Sihanoukville's beaches.",
-  // };
-  // const photos = {
-  //   Bangladesh:
-  //     "https://source.unsplash.com/black-boat-on-sea-shore-during-daytime-Ph5VL5Tilto",
-  //   Thailand:
-  //     "https://source.unsplash.com/five-brown-wooden-boats-jWKk-0ZBUyg",
-  //   Indonesia:
-  //     "https://source.unsplash.com/aerial-photography-of-rice-terraces-during-daytime-XEhchWQuWyM",
-  //   Malaysia:
-  //     "https://source.unsplash.com/architectural-photography-of-lighted-city-buildings-N2SKNqLcgr0",
-  //   Vietnam:
-  //     "https://source.unsplash.com/aerial-view-of-city-at-daytime-9r2yeRccyls",
-  //   Cambodia:
-  //     "https://source.unsplash.com/angkor-wat-temple-cambodia-iconic-landmark-with-reflection-in-water-LN17dtIsN7o",
-  // };
+//this is the desc i added to the database
+// const ct1 = {
+//   Bangladesh:
+//     "Explore Sundarbans' mangrove forests, Cox's Bazar's sandy beaches, and Srimangal's lush tea gardens.",
+//   Thailand:
+//     "Discover Bangkok's Grand Palace, Phi Phi Islands' pristine beaches, and Chiang Mai's vibrant night bazaar.",
+//   Indonesia:
+//     "Encounter Borobudur's ancient temple, Bali's cultural charm, and Komodo's legendary dragons.",
+//   Malaysia:
+//     "Experience Kuala Lumpur's Petronas Towers, Langkawi's scenic beauty, and Taman Negara's rainforest adventures.",
+//   Vietnam:
+//     "Cruise Ha Long Bay's limestone karsts, wander Hoi An's ancient streets, and explore the Mekong Delta's waterways.",
+//   Cambodia:
+//     "Witness Angkor Wat's majestic temples, shop at Siem Reap's night market, and relax on Sihanoukville's beaches.",
+// };
+// const photos = {
+//   Bangladesh:
+//     "https://source.unsplash.com/black-boat-on-sea-shore-during-daytime-Ph5VL5Tilto",
+//   Thailand:
+//     "https://source.unsplash.com/five-brown-wooden-boats-jWKk-0ZBUyg",
+//   Indonesia:
+//     "https://source.unsplash.com/aerial-photography-of-rice-terraces-during-daytime-XEhchWQuWyM",
+//   Malaysia:
+//     "https://source.unsplash.com/architectural-photography-of-lighted-city-buildings-N2SKNqLcgr0",
+//   Vietnam:
+//     "https://source.unsplash.com/aerial-view-of-city-at-daytime-9r2yeRccyls",
+//   Cambodia:
+//     "https://source.unsplash.com/angkor-wat-temple-cambodia-iconic-landmark-with-reflection-in-water-LN17dtIsN7o",
+// };
 
 const AboutUs = () => {
   //took all added data and make them in a country wise array then add desc and put in the database
@@ -71,6 +72,7 @@ const AboutUs = () => {
   // }, []);
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("clicked");
     const email = e.target.email.value;
     const name = e.target.name.value;
     const message = e.target.message.value;
@@ -126,245 +128,11 @@ const AboutUs = () => {
               data-aos-delay={200}
               className="text-center text-gray-800 text-lg"
             >
-              Discover Southeast Asia's wonders with our travel management
-              services. From pristine beaches to ancient temples, we ensure
-              seamless experiences tailored to your preferences. Explore,
-              indulge, and create memories effortlessly.
+              Embark on an unforgettable journey through the enchanting landscapes of Southeast Asia with our comprehensive travel management services. Dive into the azure depths of pristine beaches, marvel at the intricate beauty of ancient temples, and immerse yourself in the rich tapestry of culture and tradition. With meticulous attention to detail and personalized itineraries crafted to your preferences, we guarantee seamless experiences that transcend expectations. Explore, indulge, and create cherished memories effortlessly with us by your side.
             </p>
           </div>
-          {/* faq started */}
-          <div className="my-10 space-y-2">
-            <div
-              data-aos="fade-up"
-              data-aos-delay={100}
-              className="collapse  collapse-plus bg-base-200"
-            >
-              <input type="radio" name="my-accordion-3" defaultChecked />
-              <div className="collapse-title text-xl font-medium">
-                How long does it take to buy or sell a home?
-              </div>
-              <div className="collapse-content">
-                <p>
-                  Several factors determine how long the process of buying or
-                  selling real  takes. The most important of these factors
-                  is the season in which you begimport { axios } from 'axios';
-in to offer it for sale.
-                </p>
-                <br />
-                <p>
-                  The real  market, like other investments, is based on
-                  the principle of supply and demand. Real  is on-demand
-                  in certain seasons of the year. It is not possible to
-                  ascertain a specific time as it can vary according to the
-                  circumstances of each season. You may find the right home for
-                  you within a week, or the search process can last for months.
-                </p>
-              </div>
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay={100}
-              className="collapse collapse-plus bg-base-200"
-            >
-              <input type="radio" name="my-accordion-3" />
-              <div className="collapse-title text-xl font-medium">
-                What kind of credit score do I need to buy a home?
-              </div>
-              <div className="collapse-content">
-                <p>
-                  Most loan programs require a FICO score of 620 or better.
-                  Borrowers with higher credit scores represent less risk to the
-                  lender, often resulting in a lower the down payment
-                  requirement and better interest rate. Conversely, home
-                  shoppers with lower credit scores may need to bring more money
-                  to the table (or accept a higher interest rate) to offset the
-                  lender's risk.
-                </p>
-              </div>
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay={100}
-              className="collapse collapse-plus bg-base-200"
-            >
-              <input type="radio" name="my-accordion-3" />
-              <div className="collapse-title text-xl font-medium">
-                How much do I need for a down payment?
-              </div>
-              <div className="collapse-content">
-                <p>
-                  The financial aspect is one of the main factors that dominate
-                  the real  purchase process. People are confused about
-                  their ability to determine a specific amount to pay as a down
-                  payment and what percentage is appropriate for them. The down
-                  payment is the percentage that the customer pays out of the
-                  total amount, and the required down payment ranges from 5% to
-                  10%. While it is always recommended to pay a higher down
-                  payment such as 20%.
-                </p>{" "}
-                <br />
-                <p>
-                  The higher the percentage of the down payment, the lower the
-                  value of the installments that are paid and the easier it is
-                  for you to pay them, and the lower the value of the interest
-                  that is increased in the case of installments. We always
-                  advise you to consult with your real  broker and tell
-                  him the limits of the amount that you intend to pay as a down
-                  payment, and he will help you in getting an offer that matches
-                  your financial plans.{" "}
-                </p>
-              </div>
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay={100}
-              className="collapse collapse-plus bg-base-200"
-            >
-              <input type="radio" name="my-accordion-3" />
-              <div className="collapse-title text-xl font-medium">
-                Should I sell my current home before buying a new one?
-              </div>
-              <div className="collapse-content">
-                <p>
-                  If the built-up equity in your current home will be applied to
-                  the down payment on the new home, naturally the former will
-                  need to be sold first.
-                </p>{" "}
-                <br />
-                <p>
-                  {" "}
-                  Some home buyers decide to turn their current home into an
-                  investment property, renting it out. In that case, the current
-                  home will not need to be sold. However, your loan advisor will
-                  still need to evaluate your risk profile and credit history to
-                  determine whether making a loan on a new home is feasible
-                  while retaining title to the old home.
-                </p>{" "}
-                <br />
-                <p>
-                  Buyers often have a short time frame to sell their current
-                  home when relocating to a new city because of a job transfer.
-                  If you are moving but taking a position with the same
-                  employer, check to see if they offer relocation assistance to
-                  help offset some of the costs.
-                </p>
-              </div>
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-delay={100}
-              className="collapse collapse-plus bg-base-200"
-            >
-              <input type="radio" name="my-accordion-3" />
-              <div className="collapse-title text-xl font-medium">
-                How many homes should I view before buying one?
-              </div>
-              <div className="collapse-content">
-                <p>
-                  That's up to you! For sure, home shopping today is easier
-                  today than ever before. The ability to search for homes online
-                  and see pictures, even before setting a foot outside the
-                  comfort of your living room, has completely changed the home
-                  buying game. Convenience is at an all-time high. But, nothing
-                  beats visiting a home to see how it looks and 'feels' in
-                  person.
-                </p>
-              </div>
-            </div>
-          </div>
-          {/* faq ends */}
-          <div
-            data-aos="fade-up"
-            data-aos-delay={200}
-            className="stats rounded-lg bg-card text-black shadow w-full"
-          >
-            <div className="stat text-center">
-              <div className="stat-title text-gray-700">Apartment Houses</div>
-              <div className="stat-value">35</div>
-            </div>
-
-            <div className="stat text-center">
-              <div className="stat-title text-gray-700">Total Houses</div>
-              <div className="stat-value">2.3k</div>
-            </div>
-
-            <div className="stat text-center">
-              <div className="stat-title text-gray-700">Happry Customers</div>
-              <div className="stat-value">1.3k</div>
-            </div>
-          </div>
-          <div className="my-10">
-            <h2
-              data-aos="fade-down"
-              data-aos-delay={300}
-              className="text-2xl mb-7 sm:text-3xl  font-poppins text-black font-semibold text-center"
-            >
-              What People Say
-            </h2>
-            <div
-              data-aos="fade-up"
-              data-aos-delay={400}
-              className="flex flex-col md:flex-row mx-auto gap-3"
-            >
-              <div className="max-w-md mx-auto p-6 overflow-hidden rounded-lg shadow bg-card text-black">
-                <article>
-                  <h2 className="text-center text-5xl">"</h2>
-                  <p className=" text-xl text-black">
-                  "I highly recommend this website to anyone planning a trip. The attention to detail and personalized recommendations made my vacation unforgettable. I'll definitely be using their services again!"
-                  </p>
-                  <div className="flex items-center mt-8 space-x-4">
-                    <img
-                      src="https://source.unsplash.com/man-wearing-green-polo-shirt-6anudmpILw4"
-                      alt=""
-                      className="w-10 h-10 rounded-full bg-card"
-                    />
-                    <div>
-                      <h3 className="text-sm font-medium">Mark Stivens</h3>
-                      <p className="text-sm text-black">NYC</p>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div className="max-w-md mx-auto p-6 overflow-hidden rounded-lg shadow bg-card text-black">
-                <article>
-                  <h2 className="text-center text-5xl">"</h2>
-                  <p className=" text-xl text-black">
-                  "I was delighted by how easy it was to find my dream vacation on this website. The layout is well-decorated, making it a joy to explore. It's like each page was designed to inspire wanderlust! Planning my next adventure has never been more enjoyable."
-                  </p>
-                  <div className="flex items-center mt-8 space-x-4">
-                    <img
-                      src="https://source.unsplash.com/man-wearing-black-and-white-top-7omHUGhhmZ0"
-                      alt=""
-                      className="w-10 h-10 rounded-full bg-card"
-                    />
-                    <div>
-                      <h3 className="text-sm font-medium">Michael Green</h3>
-                      <p className="text-sm text-black">Los Angeles</p>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div className="max-w-md mx-auto p-6 overflow-hidden rounded-lg shadow bg-card text-black">
-                <article>
-                  <h2 className="text-center text-5xl">"</h2>
-                  <p className=" text-xl text-black">
-                  "I love how this website is both easy to navigate and beautifully decorated. Finding my next travel destination feels like flipping through a travel magazine. It's a pleasure to explore, and planning my trips has never been simpler!"."
-                  </p>
-                  <div className="flex items-center mt-8 space-x-4">
-                    <img
-                      src="https://source.unsplash.com/a-man-in-a-yellow-shirt-smiling-at-the-camera-ZjDbRtR_BcE"
-                      alt=""
-                      className="w-10 h-10 rounded-full bg-card"
-                    />
-                    <div>
-                      <h3 className="text-sm font-medium">Wendy Moore</h3>
-                      <p className="text-sm text-black">Washington</p>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
+        
+          <WhatPeopleSay />
           <section
             data-aos="fade-up"
             data-aos-delay={300}

@@ -7,6 +7,7 @@ import Slider from "./../components/Slider";
 // import SmartHourseGallery from './../components/SmartHourseGallery';
 // import TrustedByCompany from '../components/TrustedByCompany';
 import { IoCall } from 'react-icons/io5';
+import WhatPeopleSay from "../components/WhatPeopleSay";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <TouristSpotHome />
       <CountriesSection/>
       <TouristGallery />
+      <WhatPeopleSay/>
       
     </div>
   );
