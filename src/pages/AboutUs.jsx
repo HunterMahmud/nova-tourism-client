@@ -53,7 +53,7 @@ const AboutUs = () => {
   // don't uncomment this
 
   // useEffect(() => {
-  //   axios.get("http://localhost:5000/allSpotCountry").then((res) => {
+  //   axios.get("https://nova-tourism-server.vercel.app/allSpotCountry").then((res) => {
   //     //console.log(JSON.stringify(res.data));
   //     // setSpotInfo(res.data);
   //     // console.log(res.data);
@@ -64,7 +64,7 @@ const AboutUs = () => {
   //       newCountry[x].photo = photos[newCountry[x]._id];
   //     }
   //     console.log(newCountry);
-  //     axios.post('http://localhost:5000/countries/data',newCountry )
+  //     axios.post('https://nova-tourism-server.vercel.app/countries/data',newCountry )
   //     .then(res=> {
   //       console.log(res.data);
   //     })

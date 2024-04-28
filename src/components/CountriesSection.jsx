@@ -6,7 +6,7 @@ const CountriesSection = () => {
   const [countryInfo, setCountryInfo] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    axios.get("http://localhost:5000/countries/data").then((res) => {
+    axios.get("https://nova-tourism-server.vercel.app/countries/data").then((res) => {
       // console.log(res.data);
       setCountryInfo(res.data);
       setLoading(false);
@@ -49,7 +49,7 @@ import SingleCountry from "./SingleCountry";
 const CountriesSection = () => {
   const [spotInfo, setSpotInfo] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:5000/allSpotCountry").then((res) => {
+    axios.get("https://nova-tourism-server.vercel.app/allSpotCountry").then((res) => {
       // console.log(res.data);
       setSpotInfo(res.data);
     });

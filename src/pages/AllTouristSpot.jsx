@@ -14,19 +14,19 @@ const AllTouristSpot = () => {
   useEffect(() => {
     setLoading(true);
     if (sortOrder == 1) {
-      axios.get("http://localhost:5000/allSpot/sortOrder/1").then((res) => {
+      axios.get("https://nova-tourism-server.vercel.app/allSpot/sortOrder/1").then((res) => {
         // console.log(res.data);
         setSpotInfo(res.data);
         setLoading(false);
       });
     } else if (sortOrder == 2) {
-      axios.get("http://localhost:5000/allSpot/sortOrder/2").then((res) => {
+      axios.get("https://nova-tourism-server.vercel.app/allSpot/sortOrder/2").then((res) => {
         // console.log(res.data);
         setSpotInfo(res.data);
         setLoading(false)
       });
     } else {
-      axios.get("http://localhost:5000/allSpot").then((res) => {
+      axios.get("https://nova-tourism-server.vercel.app/allSpot").then((res) => {
         // console.log(res.data);
         setSpotInfo(res.data);
         setLoading(false);

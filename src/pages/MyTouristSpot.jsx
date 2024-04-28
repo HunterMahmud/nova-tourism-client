@@ -17,7 +17,7 @@ const MyTouristSpot = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5000/mylist/${user.email}`)
+      .get(`https://nova-tourism-server.vercel.app/mylist/${user.email}`)
 
       .then((res) => {
         console.log(res.data);
@@ -38,7 +38,7 @@ const MyTouristSpot = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/deleteSpot/${id}`).then((res) => {
+        axios.delete(`https://nova-tourism-server.vercel.app/deleteSpot/${id}`).then((res) => {
           // console.log(res.data);
           if (res.data.deletedCount > 0) {
             Swal.fire({

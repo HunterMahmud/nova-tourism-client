@@ -28,12 +28,12 @@ const router = createBrowserRouter([
             {
                 path:'/allspot',
                 element: <AllTouristSpot/>,
-                loader: ()=> fetch('http://localhost:5000/allSpot')
+                loader: ()=> fetch('https://nova-tourism-server.vercel.app/allSpot')
             },
             {
                 path:'/allspot/:id',
                 element: <ProtectedRoute><SpotDetails/></ProtectedRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/allSpot/${params.id}`),
+                loader: ({params}) => fetch(`https://nova-tourism-server.vercel.app/allSpot/${params.id}`),
             },
             {
                 path: '/addspot',
@@ -47,12 +47,12 @@ const router = createBrowserRouter([
             {
                 path:'/:country',
                 element: <Country/>,
-                loader: ({params}) => fetch(`http://localhost:5000/country/${params.country}`),
+                loader: ({params}) => fetch(`https://nova-tourism-server.vercel.app/country/${params.country}`),
             },
             {
                 path: '/update/:id',
                 element: <ProtectedRoute><UpdateSpot/></ProtectedRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/allSpot/${params.id}`)
+                loader: ({params}) => fetch(`https://nova-tourism-server.vercel.app/allSpot/${params.id}`)
             },
             {
                 path:'/aboutus',

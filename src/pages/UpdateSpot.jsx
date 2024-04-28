@@ -45,7 +45,7 @@ const UpdateSpot = () => {
   const onSubmitEdit = (updateInfo) => {
     console.log(updateInfo);
     axios
-      .patch(`http://localhost:5000/update/${_id}`, updateInfo)
+      .patch(`https://nova-tourism-server.vercel.app/update/${_id}`, updateInfo)
       .then((res) => {
         // console.log(res);
         if (res?.data?.modifiedCount > 0) {

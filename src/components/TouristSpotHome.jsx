@@ -10,7 +10,7 @@ const TouristSpotHome = () => {
   const [ loading,setLoading] = useState(true);
   useEffect(() => {
     setLoading(true);
-    axios.get("http://localhost:5000/countrySpot").then((res) => {
+    axios.get("https://nova-tourism-server.vercel.app/countrySpot").then((res) => {
       console.log(res.data);
       setSpotInfo(res.data);
       setLoading(false);

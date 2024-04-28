@@ -50,7 +50,7 @@ const AddTouristSpot = () => {
 
     console.log(spotInfo);
 
-    axios.post("http://localhost:5000/addSpot", spotInfo).then((res) => {
+    axios.post("https://nova-tourism-server.vercel.app/addSpot", spotInfo).then((res) => {
       // console.log(res);
       if (res.data?.insertedId) {
         toast.success("Added Successfully");
