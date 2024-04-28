@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import contextProvider from "./contextProvider";
 import { toast } from 'react-toastify';
+import { FiSun, FiMoon } from "react-icons/fi";
 
 
 
@@ -29,7 +30,11 @@ const Navbar = () => {
       ) }
       <li>
         <NavLink className='text-lg' to="/aboutus">About Us</NavLink>
+        
       </li>
+      {/* {
+        !user && ()
+      } */}
     </>
   );
   const handleLogOut = () => {
@@ -79,6 +84,10 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 space-x-3">{links}</ul>
       </div>
+      {/* <div className="text-black">
+      <FiSun/> 
+        <FiMoon/>
+      </div> */}
       <div className="navbar-end">
         <div className="flex gap-3">
           {user ? (

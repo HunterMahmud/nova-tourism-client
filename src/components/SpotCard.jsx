@@ -55,7 +55,7 @@ const SpotCard = ({ spot }) => {
                 <p>{averageCost}$</p>
               </div>
               <div className="flex justify-between">
-                <p>Season: </p>
+                <p>Seasonality: </p>
                 <p> {seasonality}</p>
               </div>
             </div>
