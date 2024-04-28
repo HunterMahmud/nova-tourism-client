@@ -202,7 +202,7 @@ const AboutUs = () => {
                     name="name"
                     required={true}
                     placeholder="Bill Gates"
-                    className="block dark:bg-gray-800 dark:placeholder:text-gray-300 dark:text-gray-200 placeholder:text-gray-700 w-full p-2  rounded-md shadow-sm  bg-gray-100 border border-gray-600 "
+                    className="block dark:bg-gray-700 dark:placeholder:text-gray-300 dark:text-gray-200 placeholder:text-gray-700 w-full p-2  rounded-md shadow-sm  bg-gray-100 border border-gray-600 "
                   />
                 </label>
                 <label className="block">
@@ -212,7 +212,7 @@ const AboutUs = () => {
                     name="email"
                     required={true}
                     placeholder="bill@gates.com"
-                    className="block dark:bg-gray-800 dark:placeholder:text-gray-300 dark:text-gray-200 placeholder:text-gray-700 w-full p-2  rounded-md shadow-sm  bg-gray-100 border border-gray-600 "
+                    className="block dark:bg-gray-700 dark:placeholder:text-gray-300 dark:text-gray-200 placeholder:text-gray-700 w-full p-2  rounded-md shadow-sm  bg-gray-100 border border-gray-600 "
                   />
                 </label>
                 <label className="block">
@@ -222,13 +222,13 @@ const AboutUs = () => {
                     rows="3"
                     name="message"
                     placeholder="Your message"
-                    className="block dark:bg-gray-800 dark:placeholder:text-gray-300 dark:text-gray-200 placeholder:text-gray-700 w-full p-2  rounded-md shadow-sm  bg-gray-100 border border-gray-600 "
+                    className="block dark:bg-gray-700 dark:placeholder:text-gray-300 dark:text-gray-200 placeholder:text-gray-700 w-full p-2  rounded-md shadow-sm  bg-gray-100 border border-gray-600 "
                   ></textarea>
                 </label>
                 <input
                   type="submit"
                   value={"Send"}
-                  className="self-center px-8 py-3 text-lg rounded font-poppins font-bold text-white hover:cursor-pointer  bg-violet-500"
+                  className="self-center px-8 py-3 text-lg rounded font-bugrasimo font-bold text-white hover:cursor-pointer  bg-violet-500"
                 />
               </form>
             </div>
