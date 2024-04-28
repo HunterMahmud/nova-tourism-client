@@ -10,12 +10,65 @@ import "leaflet/dist/leaflet.css";
 
 import { db } from "./../Firebase/firebase.config";
 import { icon } from "leaflet";
+import axios from "axios";
+import { useEffect } from "react";
 
 const ICON = icon({
   iconUrl: "https://unpkg.com/leaflet@1.9.3/dist/images/marker-icon-2x.png",
   iconSize: [20, 32],
 });
+  //this is the desc i added to the database
+  // const ct1 = {
+  //   Bangladesh:
+  //     "Explore Sundarbans' mangrove forests, Cox's Bazar's sandy beaches, and Srimangal's lush tea gardens.",
+  //   Thailand:
+  //     "Discover Bangkok's Grand Palace, Phi Phi Islands' pristine beaches, and Chiang Mai's vibrant night bazaar.",
+  //   Indonesia:
+  //     "Encounter Borobudur's ancient temple, Bali's cultural charm, and Komodo's legendary dragons.",
+  //   Malaysia:
+  //     "Experience Kuala Lumpur's Petronas Towers, Langkawi's scenic beauty, and Taman Negara's rainforest adventures.",
+  //   Vietnam:
+  //     "Cruise Ha Long Bay's limestone karsts, wander Hoi An's ancient streets, and explore the Mekong Delta's waterways.",
+  //   Cambodia:
+  //     "Witness Angkor Wat's majestic temples, shop at Siem Reap's night market, and relax on Sihanoukville's beaches.",
+  // };
+  // const photos = {
+  //   Bangladesh:
+  //     "https://source.unsplash.com/black-boat-on-sea-shore-during-daytime-Ph5VL5Tilto",
+  //   Thailand:
+  //     "https://source.unsplash.com/five-brown-wooden-boats-jWKk-0ZBUyg",
+  //   Indonesia:
+  //     "https://source.unsplash.com/aerial-photography-of-rice-terraces-during-daytime-XEhchWQuWyM",
+  //   Malaysia:
+  //     "https://source.unsplash.com/architectural-photography-of-lighted-city-buildings-N2SKNqLcgr0",
+  //   Vietnam:
+  //     "https://source.unsplash.com/aerial-view-of-city-at-daytime-9r2yeRccyls",
+  //   Cambodia:
+  //     "https://source.unsplash.com/angkor-wat-temple-cambodia-iconic-landmark-with-reflection-in-water-LN17dtIsN7o",
+  // };
+
 const AboutUs = () => {
+  //took all added data and make them in a country wise array then add desc and put in the database
+  // don't uncomment this
+
+  // useEffect(() => {
+  //   axios.get("http://localhost:5000/allSpotCountry").then((res) => {
+  //     //console.log(JSON.stringify(res.data));
+  //     // setSpotInfo(res.data);
+  //     // console.log(res.data);
+  //     let newCountry = res.data;
+  //     // console.log(newCountry);
+  //     for (let x = 0; x < 6; x++) {
+  //       newCountry[x].desc = ct1[newCountry[x]._id];
+  //       newCountry[x].photo = photos[newCountry[x]._id];
+  //     }
+  //     console.log(newCountry);
+  //     axios.post('http://localhost:5000/countries/data',newCountry )
+  //     .then(res=> {
+  //       console.log(res.data);
+  //     })
+  //   });
+  // }, []);
   const handleSubmit = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -94,7 +147,8 @@ const AboutUs = () => {
                 <p>
                   Several factors determine how long the process of buying or
                   selling real  takes. The most important of these factors
-                  is the season in which you begin to offer it for sale.
+                  is the season in which you begimport { axios } from 'axios';
+in to offer it for sale.
                 </p>
                 <br />
                 <p>

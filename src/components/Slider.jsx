@@ -1,6 +1,7 @@
 import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Typewriter } from "react-simple-typewriter";
 
 // Import Swiper styles
 import "swiper/css";
@@ -12,6 +13,17 @@ import "swiper/css/autoplay";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import { Link } from "react-router-dom";
 
+// "Journey into Discovery"-
+// "Find Your Wanderlust",
+// "Seek Adventure Ahead",
+// "Explore the Unseen",
+// "Roam and Revel",
+// "Discover Your Next Adventure",
+// "Explore Hidden Gems",
+// "Embark on Your Journey",
+// "Uncover New Destinations",
+// "Experience Exciting Travel",
+
 const Slider = () => {
   return (
     <div className="relative">
@@ -20,16 +32,37 @@ const Slider = () => {
         className="absolute top-[40%] left-12 md:left-20 w-[70%]  z-10"
       >
         <div className=" h-[40%] max-w-[900px] text-white p-5">
-          <h1 className="text-2xl md:text-5xl uppercase font-poppins ">
-            Find your next Tourist Spot{" "}
+          <h1 className="text-2xl md:text-5xl uppercase font-bugrasimo ">
+            {" "}
+            <Typewriter
+              words={[
+                "Find your next Tourist Spot",
+                "Journey into Discovery",
+                "Find Your Wanderlust",
+                "Seek Adventure Ahead",
+                "Explore the Unseen",
+                "Roam and Revel",
+                "Discover Your Next Adventure",
+                "Explore Hidden Gems",
+                "Embark on Your Journey",
+                "Uncover New Destinations",
+                "Experience Exciting Travel",
+              ]}
+              loop={5}
+              cursor
+              cursorStyle="_"
+              typeSpeed={70}
+              deleteSpeed={40}
+              delaySpeed={1500}
+            />
           </h1>
           <div className="flex items-center gap-3">
             <span className="text-[35px] md:text-[50px] ">&rarr;</span>
             <Link
               to="/allspot"
-              className="uppercase mt-2 p-2 border border-blue-500 rounded-md text-sm lg:text-base"
+              className=" mt-2 p-2 border border-blue-500 rounded-md text-sm lg:text-base"
             >
-              explore more
+              Explore More
             </Link>
           </div>
         </div>

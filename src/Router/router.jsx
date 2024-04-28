@@ -13,6 +13,7 @@ import ProtectedRoute from '../components/ProtectedRoute';
 import SpotDetails from '../pages/SpotDetails';
 import AboutUs from '../pages/AboutUs';
 import UpdateSpot from './../pages/UpdateSpot';
+import Country from '../pages/Country';
 
 const router = createBrowserRouter([
     {
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
                 path: '/mylist',
                 element:<ProtectedRoute> <MyTouristSpot/></ProtectedRoute>,
             
+            },
+            {
+                path:'/:country',
+                element: <Country/>,
+                loader: ({params}) => fetch(`http://localhost:5000/country/${params.country}`),
             },
             {
                 path: '/update/:id',

@@ -13,7 +13,7 @@ const Home = () => {
       <Helmet>
         <title>Home | Nova Travel</title>
       </Helmet>
-      {/* <Slider /> */}
+      <Slider />
 
       {/* <TouristSpotHome /> */}
       <CountriesSection/>

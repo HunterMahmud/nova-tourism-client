@@ -28,7 +28,7 @@ const AllTouristSpot = () => {
     }
   }, [sortOrder]);
   const handleSetSortOrder = (orderId) => {
-    console.log(orderId.target.value);
+    // console.log(orderId.target.value);
     setSortOrder(orderId.target.value);
   };
   return (
