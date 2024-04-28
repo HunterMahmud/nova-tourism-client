@@ -21,11 +21,11 @@ const TouristSpotHome = () => {
      <div className="max-w-7xl mx-auto "> 
      <h1
         data-aos="fade-down"
-        className="text-3xl lg:text-5xl font-bold font-poppins text-center mt-7 my-3 text-gray-900"
+        className="text-3xl lg:text-5xl font-bold font-bugrasimo text-center mt-7 my-3 dark:text-gray-200 text-gray-900"
       >
         All Tourist Spot
       </h1>
-      <p data-aos="fade-down" data-aos-delay={100} className="text-center">
+      <p data-aos="fade-down" data-aos-delay={100} className="text-center text-black dark:text-gray-100">
       All the favorite tourist spot here.
       </p>
     

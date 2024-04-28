@@ -52,11 +52,11 @@ const MyTouristSpot = () => {
       }
     });
   };
-  if(loading) {return <div className="w-full min-h-[calc(100vh-349px)] flex items-center justify-center"><span className="loading loading-spinner loading-lg"></span></div>;}
+  if(loading) {return <div className="w-full min-h-[calc(100vh-349px)] bg-white dark:bg-gray-800 flex items-center justify-center"><span className="loading loading-spinner loading-lg"></span></div>;}
   if (mySpotData.length == 0) {
     return (
-      <div className="flex items-center justify-center h-[calc(100vh-300px)]">
-        <h1 className="font-bugrasimo text-2xl">Not found any data</h1>
+      <div className="flex bg-gray-100 dark:bg-gray-800 items-center justify-center h-[calc(100vh-300px)]">
+        <h1 className="font-bugrasimo text-2xl text-black dark:text-gray-100">Not found any data</h1>
       </div>
     );
   }
@@ -65,11 +65,11 @@ const MyTouristSpot = () => {
       <div className=" max-w-7xl p-2 mx-auto sm:p-4 text-gray-100 dark:text-gray-800">
         <h1
           data-aos="fade-down"
-          className="text-3xl lg:text-5xl font-bold font-poppins text-center mt-7 my-3 text-gray-900"
+          className="text-3xl lg:text-5xl font-bold  text-center mt-7 my-3 text-gray-900 dark:text-gray-100 font-bugrasimo"
         >
           Your Tourist Spot
         </h1>
-        <p className="text-center">All your tourist spot here.</p>
+        <p className="text-center text-gray-800 dark:text-gray-200">All your tourist spot here.</p>
 
         <div className="overflow-x-auto mt-7">
           <table className="min-w-full text-xs">
@@ -81,7 +81,7 @@ const MyTouristSpot = () => {
               <col />
               <col className="w-24" />
             </colgroup>
-            <thead className="bg-gray-700 dark:bg-gray-300">
+            <thead className="dark:bg-gray-700  bg-gray-300 text-gray-800 dark:text-gray-200">
               <tr className="text-left">
                 <th className="p-3">Serial</th>
                 <th className="p-3">Spot Name</th>
@@ -91,11 +91,11 @@ const MyTouristSpot = () => {
                 <th className="p-3">Action</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="text-gray-800 dark:text-gray-200">
               {mySpotData.map((data, index) => (
                 <tr
                   key={data._id}
-                  className="border-b border-opacity-20 border-gray-700 dark:border-gray-300 bg-gray-900 dark:bg-gray-50 font-bold"
+                  className="border-b border-opacity-20 border-gray-700 dark:border-gray-300 dark:bg-gray-900 bg-gray-50 font-bold"
                 >
                   <td className="p-3">
                     <p>{index + 1}</p>

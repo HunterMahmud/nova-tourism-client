@@ -16,11 +16,11 @@ const TouristGallery = () => {
     <div data-aos="fade-up" className="mx-2 my-16">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row text-center lg:text-left text-black ">
         <div className="p-3">
-          <h2 data-aos="fade-down" data-aos-delay={100} className="text-3xl lg:text-4xl font-semibold">Introducing A Travel Spot Gallery</h2>
-          <p className="md:text-lg mt-8 text-gray-800">
+          <h2 data-aos="fade-down" data-aos-delay={100} className="text-3xl lg:text-4xl font-bugrasimo font-semibold text-black dark:text-gray-100">Introducing A Travel Spot Gallery</h2>
+          <p className="md:text-lg mt-8 text-gray-800  dark:text-gray-100">
           Explore our Travel Gallery, where luxury meets convenience. From chic studios to lavish penthouses, each space is crafted for the modern traveler. Welcome to your ultimate wanderlust haven.
           </p>
-          <Link to='/allSpot' className="btn btn-primary bg-violet-500 text-white mt-5">Explore More</Link>
+          <Link to='/allSpot' className="btn btn-primary bg-violet-500 text-white font-bugrasimo mt-5">Explore More</Link>
         </div>
         <div data-aos="fade-up" data-aos-delay={100}  className="lg:mx-3">
           <Swiper

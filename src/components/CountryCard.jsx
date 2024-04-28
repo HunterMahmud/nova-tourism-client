@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import axios from "axios";
-import { Tooltip } from "react-tooltip";
 
 const CountryCard = ({ country }) => {
   // console.log(country.photo);

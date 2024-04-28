@@ -101,14 +101,14 @@ const AboutUs = () => {
       <div className=" flex flex-col items-center justify-center h-[300px]  object-cover bg-cover bg-[linear-gradient(45deg,rgba(0,0,0,0.5),rgba(0,0,0,0)),url('https://source.unsplash.com/three-brown-wooden-boat-on-blue-lake-water-taken-at-daytime-T7K4aEPoGGk')] bg-center bg-no-repeat">
         <h2
           data-aos="fade-down"
-          className="text-2xl sm:text-4xl lg:text-5xl font-poppins text-white"
+          className="text-2xl sm:text-4xl lg:text-5xl font-bugrasimo text-white dark:text-gray-200"
         >
           About Us
         </h2>
         <span
           data-aos="fade-up"
           data-aos-delay={100}
-          className="text-sm text-white text-center"
+          className="text-sm text-white dark:text-gray-300 text-center"
         >
           Our Mission
         </span>
@@ -119,14 +119,14 @@ const AboutUs = () => {
             <h2
               data-aos="fade-up"
               data-aos-delay={100}
-              className="text-2xl mb-3 sm:text-3xl font-poppins text-black font-semibold text-center"
+              className="text-2xl mb-3 sm:text-3xl font-bugrasimo text-black dark:text-gray-100 font-semibold text-center"
             >
               About Our Company
             </h2>
             <p
               data-aos="fade-up"
               data-aos-delay={200}
-              className="text-center text-gray-800 text-lg"
+              className="text-center text-gray-800 dark:text-gray-300 text-lg"
             >
               Embark on an unforgettable journey through the enchanting landscapes of Southeast Asia with our comprehensive travel management services. Dive into the azure depths of pristine beaches, marvel at the intricate beauty of ancient temples, and immerse yourself in the rich tapestry of culture and tradition. With meticulous attention to detail and personalized itineraries crafted to your preferences, we guarantee seamless experiences that transcend expectations. Explore, indulge, and create cherished memories effortlessly with us by your side.
             </p>
@@ -136,7 +136,7 @@ const AboutUs = () => {
           <section
             data-aos="fade-up"
             data-aos-delay={300}
-            className="py-6 rounded-lg bg-card my-10 text-black"
+            className="py-6 rounded-lg bg-card dark:bg-gray-600 my-10 text-black"
           >
             <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
               <div
@@ -144,11 +144,11 @@ const AboutUs = () => {
                 data-aos-delay={400}
                 className="py-6 md:py-0 md:px-6"
               >
-                <h1 className="text-4xl font-bold">Get in touch</h1>
-                <p className="pt-2 pb-4">
+                <h1 className="text-4xl dark:text-gray-100 font-bugrasimo font-bold">Get in touch</h1>
+                <p className="pt-2 dark:text-gray-200 pb-4">
                   Fill in the form to start a conversation
                 </p>
-                <div className="space-y-4">
+                <div className="space-y-4 dark:text-gray-200">
                   <p className="flex items-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -196,33 +196,33 @@ const AboutUs = () => {
                 className="flex flex-col py-6 space-y-6 md:py-0 md:px-6"
               >
                 <label className="block">
-                  <span className="mb-1">Name</span>
+                  <span className="mb-1 dark:text-gray-200">Name</span>
                   <input
                     type="text"
                     name="name"
                     required={true}
                     placeholder="Bill Gates"
-                    className="block w-full p-2 placeholder:text-gray-600 rounded-md shadow-sm  bg-gray-100 border border-gray-600 "
+                    className="block dark:bg-gray-800 dark:placeholder:text-gray-300 dark:text-gray-200 placeholder:text-gray-700 w-full p-2  rounded-md shadow-sm  bg-gray-100 border border-gray-600 "
                   />
                 </label>
                 <label className="block">
-                  <span className="mb-1">Email</span>
+                  <span className="mb-1 dark:text-gray-200">Email</span>
                   <input
                     type="email"
                     name="email"
                     required={true}
                     placeholder="bill@gates.com"
-                    className="block w-full p-2 placeholder:text-gray-600 rounded-md shadow-sm  bg-gray-100 border border-gray-600 "
+                    className="block dark:bg-gray-800 dark:placeholder:text-gray-300 dark:text-gray-200 placeholder:text-gray-700 w-full p-2  rounded-md shadow-sm  bg-gray-100 border border-gray-600 "
                   />
                 </label>
                 <label className="block">
-                  <span className="mb-1">Message</span>
+                  <span className="mb-1 dark:text-gray-200">Message</span>
                   <textarea
                     required={true}
                     rows="3"
                     name="message"
                     placeholder="Your message"
-                    className="block w-full p-2 placeholder:text-gray-600 rounded-md shadow-sm  bg-gray-100 border border-gray-600 "
+                    className="block dark:bg-gray-800 dark:placeholder:text-gray-300 dark:text-gray-200 placeholder:text-gray-700 w-full p-2  rounded-md shadow-sm  bg-gray-100 border border-gray-600 "
                   ></textarea>
                 </label>
                 <input
@@ -238,7 +238,7 @@ const AboutUs = () => {
             data-aos-delay="200"
             className="w-full my-10 mb-28 mx-auto h-[400px] lg:h-[500px] "
           >
-            <h2 className="text-2xl mb-7 sm:text-3xl  font-poppins text-black font-semibold">
+            <h2 className="text-2xl mb-7 sm:text-3xl  font-bugrasimo text-black dark:text-gray-100 font-semibold">
               Our Location: 6000 Rajshahi, BD
             </h2>
             <MapContainer

@@ -24,7 +24,7 @@ import {
     const { emailPasswordLogIn, googleLogin, githubLogin } = contextProvider();
     const location = useLocation();
     const navigate = useNavigate();
-    console.log(location);
+    // console.log(location);
   
     const onSubmitLogin = (data) => {
       console.log(data);
@@ -73,12 +73,12 @@ import {
         <ScrollRestoration />
         <div
           data-aos="zoom-in"
-          className="w-full mb-9 max-w-md mx-auto mt-12 p-8 space-y-3 rounded-xl border border-gray-100/25 bg-card text-gray-100 shadow-lg"
+          className="w-full mb-9 max-w-md mx-auto mt-12 p-8 space-y-3 rounded-xl border border-gray-100/25 bg-card dark:bg-gray-600 text-gray-100 shadow-lg"
         >
-          <h1 className="text-2xl font-bold text-center text-black">Login</h1>
+          <h1 className="text-2xl font-bold text-center text-black font-bugrasimo dark:text-gray-100">Login</h1>
           <form onSubmit={handleSubmit(onSubmitLogin)} className="space-y-6">
             <div className="space-y-1 text-sm">
-              <label htmlFor="email" className="block text-gray-800">
+              <label htmlFor="email" className="block text-gray-800 dark:text-gray-200">
                 Email
               </label>
               <input
@@ -91,14 +91,14 @@ import {
                 type="email"
                 name="email"
                 placeholder="Email"
-                className="w-full px-4 py-3 rounded-md border-2 border-gray-500 bg-main text-gray-800 focus:border-violet-100"
+                className="w-full dark:bg-gray-700 dark:placeholder:text-gray-300 dark:text-gray-200 placeholder:text-gray-700 px-4 py-3 rounded-md border-2 border-gray-500 bg-main text-gray-800 focus:border-violet-100"
               />
               {errors?.email?.message && (
                 <span className="text-red-500">{errors.email.message}</span>
               )}
             </div>
             <div className="space-y-1 text-sm">
-              <label htmlFor="password" className="block text-gray-800">
+              <label htmlFor="password" className="block text-gray-800 dark:text-gray-200">
                 Password
               </label>
   
@@ -114,10 +114,10 @@ import {
                 name="password"
                 id="password"
                 placeholder="Password"
-                className="w-full px-4 py-3 rounded-md border-2 border-gray-500 bg-main text-gray-800 focus:border-violet-100"
+                className="w-full dark:bg-gray-700 dark:placeholder:text-gray-300 dark:text-gray-200 placeholder:text-gray-700 px-4 py-3 rounded-md border-2 border-gray-500 bg-main text-gray-800 focus:border-violet-100"
               />
               <span
-                  className="absolute top-4 right-3 text-black cursor-pointer p-1"
+                  className="absolute top-4 right-3 text-black dark:text-white cursor-pointer p-1"
                   onClick={() => {
                     setShowPass(!showPass);
                   }}
@@ -134,13 +134,13 @@ import {
                 <Link className="underline">Forgot Password?</Link>
               </div> */}
             </div>
-            <button className="block w-full p-3 text-center rounded-sm text-white font-bold bg-violet-500">
+            <button className="block w-full p-3 text-center rounded-sm text-white font-bold font-bugrasimo bg-violet-500">
               Login
             </button>
           </form>
           <div className="flex items-center pt-4 space-x-1">
             <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
-            <p className="px-3 text-sm text-gray-800">
+            <p className="px-3 text-sm text-gray-800 dark:text-gray-200">
               Login with social accounts
             </p>
             <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
@@ -149,7 +149,7 @@ import {
             <button
               onClick={handleLoginWithGoogle}
               title="Log in with Google"
-              className="p-3 rounded-sm text-black"
+              className="p-3 rounded-sm text-black dark:text-white"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -171,7 +171,7 @@ import {
             <button
               onClick={handleLoginWithGithub}
               title="Log in with GitHub"
-              className="p-3 rounded-sm text-black"
+              className="p-3 rounded-sm text-black dark:text-white"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -182,9 +182,9 @@ import {
               </svg>
             </button>
           </div>
-          <p className="text-sm text-center sm:px-6 text-gray-800">
+          <p className="text-sm text-center sm:px-6 text-gray-800 dark:text-gray-200">
             Don't have an account?
-            <Link to="/register" className="underline text-gray-700 font-bold ml-2">
+            <Link to="/register" className="underline text-gray-700 dark:text-gray-50 font-bold ml-2">
               Register
             </Link>
           </p>

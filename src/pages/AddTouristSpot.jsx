@@ -12,7 +12,7 @@ const AddTouristSpot = () => {
   const { displayName, email } = user;
   const defaultValues = {
     displayName,
-    email: email || "not found",
+    email: email || "not-found",
     location: "",
     travelTime: "",
     totalVisitor: 0,
@@ -70,11 +70,11 @@ const AddTouristSpot = () => {
       <ScrollRestoration />
       <h1
         data-aos="fade-down"
-        className="text-3xl lg:text-5xl font-bold font-poppins text-center mt-7 my-3 text-gray-900"
+        className="text-3xl lg:text-5xl font-bold font-bugrasimo text-center mt-7 my-3 dark:text-gray-100 text-gray-900"
       >
         Add Tourist Spot
       </h1>
-      <p data-aos="fade-down" data-aos-delay={100} className="text-center">
+      <p data-aos="fade-down" data-aos-delay={100} className="text-center dark:text-gray-200">
         Fill the form to add your tourist spot.
       </p>
       <div className="max-w-7xl mx-auto">
@@ -82,7 +82,7 @@ const AddTouristSpot = () => {
           <section
             data-aos="fade-down"
             data-aos-delay={300}
-            className="p-6 my-10 lg:col-span-3 rounded-md text-black bg-card"
+            className="p-6 my-10 lg:col-span-3 rounded-md text-black dark:text-gray-200 dark:bg-gray-600 bg-card"
           >
             <form
               onSubmit={handleSubmit(onSubmitSpot)}
@@ -98,7 +98,7 @@ const AddTouristSpot = () => {
                   type="text"
                   required={true}
                   placeholder="Ex: Koromjol"
-                  className="w-full rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
+                  className="w-full dark:bg-gray-700 dark:placeholder:text-gray-300 dark:text-gray-200 placeholder:text-gray-700 rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
                 />
               </div>
               <div className="">
@@ -111,7 +111,7 @@ const AddTouristSpot = () => {
                  id="cname"
                   type="text"
                   required={true}
-                  className="w-full rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
+                  className="w-full dark:bg-gray-700 dark:placeholder:text-gray-300 dark:text-gray-200 placeholder:text-gray-700 rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
                 >
                   <option value="Bangladesh">Bangladesh</option>
                   <option value="Indonesia">Indonesia</option>
@@ -127,7 +127,7 @@ const AddTouristSpot = () => {
                   type="text"
                   required={true}
                   placeholder="Ex: Bangladesh"
-                  className="w-full rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
+                  className="w-full dark:bg-gray-700 dark:placeholder:text-gray-300 dark:text-gray-200 placeholder:text-gray-700 rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
                 /> */}
                 
               </div>
@@ -141,7 +141,7 @@ const AddTouristSpot = () => {
                   type="text"
                   required={true}
                   placeholder="Ex: Sundarban, Bagerhat, Khulna"
-                  className="w-full rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
+                  className="w-full dark:bg-gray-700 dark:placeholder:text-gray-300 dark:text-gray-200 placeholder:text-gray-700 rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
                 />
               </div>
               <div className="">
@@ -154,7 +154,7 @@ const AddTouristSpot = () => {
                   type="url"
                   required={true}
                   placeholder="Ex: https://www.image.com/img.jpg"
-                  className="w-full rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
+                  className="w-full dark:bg-gray-700 dark:placeholder:text-gray-300 dark:text-gray-200 placeholder:text-gray-700 rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
                 />
               </div>
               <div className="">
@@ -167,7 +167,7 @@ const AddTouristSpot = () => {
                   type="text"
                   required={true}
                   placeholder="Ex: Summar"
-                  className="w-full rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
+                  className="w-full dark:bg-gray-700 dark:placeholder:text-gray-300 dark:text-gray-200 placeholder:text-gray-700 rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
                 />
               </div>
               <div className="">
@@ -180,7 +180,7 @@ const AddTouristSpot = () => {
                   type="number"
                   required={true}
                   placeholder="Ex: 1000"
-                  className="w-full rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
+                  className="w-full dark:bg-gray-700 dark:placeholder:text-gray-300 dark:text-gray-200 placeholder:text-gray-700 rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
                 />
               </div>
               <div className="">
@@ -193,7 +193,7 @@ const AddTouristSpot = () => {
                   type="number"
                   required={true}
                   placeholder="Ex: 7"
-                  className="w-full rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
+                  className="w-full dark:bg-gray-700 dark:placeholder:text-gray-300 dark:text-gray-200 placeholder:text-gray-700 rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
                 />
               </div>
               <div className="">
@@ -206,9 +206,9 @@ const AddTouristSpot = () => {
                   type="number"
                   required={true}
                   placeholder="Ex: 10000"
-                  className="w-full rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
+                  className="w-full dark:bg-gray-700 dark:placeholder:text-gray-300 dark:text-gray-200 placeholder:text-gray-700 rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
                 />
-              </div>
+              </div> 
               <div className="col-span-full">
                 <label htmlFor="bio" className="text-sm">
                   Short Description
@@ -218,7 +218,7 @@ const AddTouristSpot = () => {
                   required={true}
                   id="bio"
                   placeholder="Your description here..."
-                  className="w-full rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
+                  className="w-full dark:bg-gray-700 dark:placeholder:text-gray-300 dark:text-gray-200 placeholder:text-gray-700 rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
                 ></textarea>
               </div>
               <div className="">
@@ -231,7 +231,7 @@ const AddTouristSpot = () => {
                   type="text"
                   disabled={true}
                   placeholder="User Name"
-                  className="w-full p-2 disabled:cursor-not-allowed  rounded-md focus:ring focus:ring-opacity-75  text-gray-400 border border-gray-300"
+                  className="w-full dark:bg-gray-600 dark:placeholder:text-gray-300 dark:text-gray-400 placeholder:text-gray-700 p-2 disabled:cursor-not-allowed  rounded-md focus:ring focus:ring-opacity-75  text-gray-400 border border-gray-300"
                 />
               </div>
 
@@ -245,11 +245,11 @@ const AddTouristSpot = () => {
                   type="email"
                   disabled={true}
                   placeholder="User Email"
-                  className="w-full p-2 disabled:cursor-not-allowed  rounded-md focus:ring focus:ring-opacity-75  text-gray-400 border border-gray-300  "
+                  className="w-full dark:bg-gray-600 dark:placeholder:text-gray-700 dark:text-gray-400 placeholder:text-gray-700 p-2 disabled:cursor-not-allowed  rounded-md focus:ring focus:ring-opacity-75  text-gray-400 border border-gray-300  "
                 />
               </div>
               <div className="flex justify-end py-4">
-                <button className="p-2 px-4 rounded-md text-gray-100 bg-violet-500 disabled:bg-violet-300 disabled:text-gray-400 disabled:cursor-not-allowed">
+                <button className="p-2 px-4 font-bugrasimo rounded-md text-gray-100 bg-violet-500 disabled:bg-violet-300 disabled:text-gray-400 disabled:cursor-not-allowed">
                   Add
                 </button>
               </div>

@@ -102,7 +102,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-20 p-2 shadow bg-base-100 rounded-box w-52 "
+              className="menu menu-sm dropdown-content mt-3 z-20 p-2 shadow bg-base-100 rounded-box w-52 font-bugrasimo"
             >
               {links}
             </ul>
@@ -115,7 +115,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 space-x-3">{links}</ul>
+          <ul className="menu menu-horizontal font-bugrasimo px-1 space-x-3">{links}</ul>
         </div>
 
         <div className="navbar-end">
@@ -148,14 +148,14 @@ const Navbar = () => {
                 />
                 <button
                   onClick={handleLogOut}
-                  className="btn btn-secondary bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-[#f04970] sm:text-lg text-white"
+                  className="btn font-bugrasimo btn-secondary bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-[#f04970] sm:text-lg text-white"
                 >
                   Logout
                 </button>
               </>
             ) : (
               <Link to="/login">
-                <button className="btn btn-primary bg-violet-700 text-xl text-white font-poppins">
+                <button className="btn btn-primary bg-violet-700 text-xl text-white font-bugrasimo">
                   Login
                 </button>
               </Link>

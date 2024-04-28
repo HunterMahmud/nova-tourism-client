@@ -17,18 +17,18 @@ const SpotCard = ({ spot }) => {
   // if(!_id) console.log(spotName);
   return (
     <div data-aos="fade-up" className="mx-2">
-      <div className="flex flex-col max-w-sm mx-auto space-y-6 overflow-hidden rounded-md border border-gray-100/25 hover:shadow-[20px,20px,20px,5px,rgba(255,255,255,0.01)] shadow-xl bg-main text-black">
+      <div className="flex flex-col max-w-sm mx-auto space-y-6 overflow-hidden rounded-md border border-gray-100/25 hover:shadow-[20px,20px,20px,5px,rgba(255,255,255,0.01)] shadow-xl bg-main dark:bg-gray-600 text-black">
         <div>
           {/* image container starts */}
           <div className="overflow-hidden relative w-full h-60">
             <img
               src={photoURL}
               alt={spotName}
-              className="object-cover w-full h-60 transition-transform  duration-1000 transform hover:scale-125 bg-white"
+              className="object-cover w-full h-60 transition-transform  duration-1000 transform hover:scale-125 bg-white dark:bg-gray-600"
             />
           </div>
 
-          <div className="flex flex-col p-4">
+          <div className="flex dark:text-gray-100 flex-col p-4">
             <div className=" text-sm mb-3 gap-2 items-center flex-wrap">
               <div className="flex gap-2 items-center capitalize">
                 <IoLocation />
@@ -37,7 +37,7 @@ const SpotCard = ({ spot }) => {
               
             </div>
             <div className="flex flex-col">
-              <h2 className="mb-1 text-xl font-semibold capitalize">
+              <h2 className="mb-1 text-xl font-semibold capitalize font-bugrasimo">
                 {spotName}
               </h2>
             </div>
@@ -62,7 +62,7 @@ const SpotCard = ({ spot }) => {
             <div className="mt-3 w-full">
               <Link
                 to={`/allspot/${_id}`}
-                className="btn w-full text-white btn-primary bg-violet-500"
+                className="btn w-full font-bugrasimo text-white btn-primary bg-violet-500"
               >
                 View Details
               </Link>

@@ -32,7 +32,7 @@ const Slider = () => {
         className="absolute top-[40%] left-12 md:left-20 w-[70%]  z-10"
       >
         <div className=" h-[40%] max-w-[900px] text-white p-5">
-          <h1 className="text-2xl md:text-5xl uppercase font-bugrasimo ">
+          <h1 className="text-2xl dark:text-gray-200 md:text-5xl uppercase font-bugrasimo ">
             {" "}
             <Typewriter
               words={[
@@ -60,7 +60,7 @@ const Slider = () => {
             <span className="text-[35px] md:text-[50px] ">&rarr;</span>
             <Link
               to="/allspot"
-              className=" mt-2 p-2 border border-blue-500 rounded-md text-sm lg:text-base"
+              className=" mt-2 p-2 border font-bugrasimo border-blue-500 rounded-md text-sm lg:text-base"
             >
               Explore More
             </Link>
