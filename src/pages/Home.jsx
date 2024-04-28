@@ -6,6 +6,7 @@ import TouristSpotHome from "../components/TouristSpotHome";
 import Slider from "./../components/Slider";
 // import SmartHourseGallery from './../components/SmartHourseGallery';
 // import TrustedByCompany from '../components/TrustedByCompany';
+import { IoCall } from 'react-icons/io5';
 
 const Home = () => {
   return (
@@ -15,9 +16,9 @@ const Home = () => {
       </Helmet>
       <Slider />
 
-      {/* <TouristSpotHome /> */}
+      <TouristSpotHome />
       <CountriesSection/>
-      {/* <TouristGallery /> */}
+      <TouristGallery />
       
     </div>
   );

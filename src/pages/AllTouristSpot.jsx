@@ -6,24 +6,30 @@ import axios from "axios";
 
 const AllTouristSpot = () => {
   const loadedSpotInfo = useLoaderData();
+  const [loading, setLoading] = useState(true);
+ 
   // console.log(JSON.stringify(spotInfo));
   const [sortOrder, setSortOrder] = useState(0);
   const [spotInfo, setSpotInfo] = useState(loadedSpotInfo);
   useEffect(() => {
+    setLoading(true);
     if (sortOrder == 1) {
       axios.get("http://localhost:5000/allSpot/sortOrder/1").then((res) => {
         // console.log(res.data);
         setSpotInfo(res.data);
+        setLoading(false);
       });
     } else if (sortOrder == 2) {
       axios.get("http://localhost:5000/allSpot/sortOrder/2").then((res) => {
         // console.log(res.data);
         setSpotInfo(res.data);
+        setLoading(false)
       });
     } else {
       axios.get("http://localhost:5000/allSpot").then((res) => {
         // console.log(res.data);
         setSpotInfo(res.data);
+        setLoading(false);
       });
     }
   }, [sortOrder]);
@@ -31,6 +37,7 @@ const AllTouristSpot = () => {
     // console.log(orderId.target.value);
     setSortOrder(orderId.target.value);
   };
+   if(loading) {return <div className="w-full min-h-[calc(100vh-349px)] flex items-center justify-center"><span className="loading loading-spinner loading-lg"></span></div>;}
   return (
     <div>
       <Helmet>
@@ -38,21 +45,20 @@ const AllTouristSpot = () => {
       </Helmet>
       <ScrollRestoration />
       <div className="max-w-7xl mx-auto">
-        <h2
-          data-aos="fade-down"
-          data-aos-delay={100}
-          className="text-3xl mt-10 lg:text-4xl font-semibold text-center"
-        >
-          All Tourist Spot
-        </h2>
-        <p
-          data-aos="fade-down"
-          data-aos-delay={150}
-          className="md:text-lg text-center mt-8 text-gray-800"
-        >
-          All the favorite tourist spot here.
-        </p>
-        <div className="mx-2">
+      <h1
+        data-aos="fade-down"
+        className="text-3xl lg:text-5xl font-bold font-poppins text-center mt-7 my-3 text-gray-900"
+      >
+        All Tourist Spot
+      </h1>
+      <p data-aos="fade-down" data-aos-delay={100} className="text-center">
+      All the favorite tourist spot here.
+      </p>
+        
+        <div
+        data-aos="fade-down"
+        className="mx-2">
+          
           <select
             onChange={handleSetSortOrder}
             value={sortOrder}
@@ -62,7 +68,7 @@ const AllTouristSpot = () => {
             className="rounded-md p-2 focus:ring focus:ring-opacity-75 text-black bg-gray-200 border-2 border-gray-400"
           >
             <option value="0">
-              Sort By Average Cost
+              Sort Average Cost
             </option>
             <option value="1">Ascending</option>
             <option value="2">Descending</option>

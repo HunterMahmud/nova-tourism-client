@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import contextProvider from "./../components/contextProvider";
 import { useForm } from "react-hook-form";
@@ -7,6 +7,7 @@ import { ScrollRestoration } from "react-router-dom";
 import axios from "axios";
 
 const AddTouristSpot = () => {
+ 
   const { user } = contextProvider();
   const { displayName, email } = user;
   const defaultValues = {
@@ -36,6 +37,7 @@ const AddTouristSpot = () => {
   });
 
   const onSubmitSpot = (data) => {
+
     // console.log(data);
     const spotInfo = {
       ...data,
@@ -54,11 +56,11 @@ const AddTouristSpot = () => {
         toast.success("Added Successfully");
         //      reset({
         //     ...defaultValues
-        // });
+        // }); 
       }
     });
   };
-
+  
   // console.log(user);
   return (
     <div className="mx-2">

@@ -7,14 +7,18 @@ import SpotCard from "./SpotCard";
 
 const TouristSpotHome = () => {
   const [spotInfo, setSpotInfo] = useState([]);
+  const [ loading,setLoading] = useState(true);
   useEffect(() => {
+    setLoading(true);
     axios.get("http://localhost:5000/countrySpot").then((res) => {
       console.log(res.data);
       setSpotInfo(res.data);
+      setLoading(false);
     });
   }, []);
+  if(loading) {return <div className="w-full min-h-[calc(100vh-349px)] flex items-center justify-center"><span className="loading loading-spinner loading-lg"></span></div>;}
   return (
-    <div>
+    <div className="mt-10">
       <Helmet>
         <title>All Tourist Spot | Nova Travel</title>
       </Helmet>
@@ -22,14 +26,15 @@ const TouristSpotHome = () => {
      <div className="max-w-7xl mx-auto "> 
      <h1
         data-aos="fade-down"
-        data-aos-delay={100}
         className="text-3xl lg:text-5xl font-bold font-poppins text-center mt-7 my-3 text-gray-900"
       >
         All Tourist Spot
       </h1>
       <p data-aos="fade-down" data-aos-delay={100} className="text-center">
-        All the favorite tourist spot here.
+      All the favorite tourist spot here.
       </p>
+    
+       
       <div className="my-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {spotInfo.map((spot) => (
           <SpotCard key={spot._id} spot={spot} />

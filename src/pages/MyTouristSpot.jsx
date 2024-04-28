@@ -9,17 +9,20 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 
 const MyTouristSpot = () => {
-  const { user } = contextProvider();
   const [mySpotData, setMySpotData] = useState([]);
   const [refetch, setRefetch] = useState(true);
+  const { user} = contextProvider();
+  const [loading, setLoading ] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     axios
       .get(`http://localhost:5000/mylist/${user.email}`)
 
       .then((res) => {
-        // console.log(res.data);
+        console.log(res.data);
         setMySpotData(res.data);
+        setLoading(false);
       });
   }, [refetch]);
 
@@ -49,6 +52,7 @@ const MyTouristSpot = () => {
       }
     });
   };
+  if(loading) {return <div className="w-full min-h-[calc(100vh-349px)] flex items-center justify-center"><span className="loading loading-spinner loading-lg"></span></div>;}
   if (mySpotData.length == 0) {
     return (
       <div className="flex items-center justify-center h-[calc(100vh-300px)]">

@@ -10,7 +10,7 @@ import { useState } from "react";
 const Register = () => {
   const navigate = useNavigate();
   const [showPass, setShowPass] = useState(false);
-  const { emailPasswordRegister, setReload, setUser } = contextProvider();
+  const { emailPasswordRegister, setUser } = contextProvider();
   const {
     register,
     handleSubmit,
@@ -31,7 +31,6 @@ const Register = () => {
           .then(() => {
             toast.success("Register successful.");
             setUser(res.user);
-            setReload(true);
             navigate("/");
           })
           .catch(() => {

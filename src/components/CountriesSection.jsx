@@ -4,33 +4,32 @@ import CountryCard from "./CountryCard";
 
 const CountriesSection = () => {
   const [countryInfo, setCountryInfo] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     axios.get("http://localhost:5000/countries/data").then((res) => {
       // console.log(res.data);
       setCountryInfo(res.data);
+      setLoading(false);
     });
   }, []);
+  if(loading) {return <div className="w-full min-h-[calc(100vh-349px)] flex items-center justify-center"><span className="loading loading-spinner loading-lg"></span></div>;}
   return (
-    <div>
+    <div className="mt-10">
       <div className="max-w-7xl mx-auto">
-        <h2
+        <h1
           data-aos="fade-down"
-          data-aos-delay={100}
-          className="text-3xl mt-10 lg:text-4xl font-semibold text-center"
+          className="text-3xl lg:text-5xl font-bold font-poppins text-center mt-7 my-3 text-gray-900"
         >
           Countries Section
-        </h2>
-        <p
-          data-aos="fade-down"
-          data-aos-delay={150}
-          className="md:text-lg text-center text-gray-800"
-        >
+        </h1>
+        <p data-aos="fade-down" data-aos-delay={100} className="text-center">
           All the country wise favorite tourist spot here.
         </p>
+
         <div className="my-8 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3  gap-5 ">
-         {
-          countryInfo.map(country=>  <CountryCard key={country._id} country={country}/>)
-         }
+          {countryInfo.map((country) => (
+            <CountryCard key={country._id} country={country} />
+          ))}
         </div>
       </div>
     </div>
