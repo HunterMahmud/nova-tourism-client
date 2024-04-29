@@ -1,10 +1,25 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { FaLocationDot } from "react-icons/fa6";
 import { ScrollRestoration } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const SpotDetails = () => {
-  const spot = useLoaderData();
+  const {id} = useParams();
+  // console.log(id);
+  const [loading, setLoading ] = useState(true);
+  const [spot, setSpot] = useState([]);
+  useEffect(()=>{
+    setLoading(true);
+    axios.get(`https://nova-tourism-server.vercel.app/allSpot/${id}`)
+    .then(res=>{
+      // console.log(res.data);
+      setSpot(res.data);
+      setLoading(false);
+    })
+  },[])
+
   const {
     _id,
     averageCost,
@@ -19,6 +34,8 @@ const SpotDetails = () => {
     totalVisitor,
     travelTime,
   } = spot;
+
+  if(loading) {return <div className="w-full min-h-[calc(100vh-349px)] bg-white dark:bg-gray-800 flex items-center justify-center"><span className="loading loading-spinner loading-lg"></span></div>;}
 
   return (
     <div>

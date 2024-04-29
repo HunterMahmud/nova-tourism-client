@@ -32,7 +32,7 @@ const router = createBrowserRouter([
             {
                 path:'/allspot/:id',
                 element: <ProtectedRoute><SpotDetails/></ProtectedRoute>,
-                loader: ({params}) => fetch(`https://nova-tourism-server.vercel.app/allSpot/${params.id}`),
+                
             },
             {
                 path: '/addspot',
