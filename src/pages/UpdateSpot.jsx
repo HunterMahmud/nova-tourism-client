@@ -43,9 +43,15 @@ const UpdateSpot = () => {
   });
 
   const onSubmitEdit = (updateInfo) => {
-    console.log(updateInfo);
+    // console.log(updateInfo);
+    const info = {...updateInfo,
+      averageCost : parseInt(updateInfo.averageCost),
+      travelTime: parseInt(updateInfo.travelTime),
+      totalVisitor: parseInt(updateInfo.totalVisitor),
+    };
+    console.log(info);
     axios
-      .patch(`https://nova-tourism-server.vercel.app/update/${_id}`, updateInfo)
+      .patch(`https://nova-tourism-server.vercel.app/update/${_id}`, info)
       .then((res) => {
         // console.log(res);
         if (res?.data?.modifiedCount > 0) {
