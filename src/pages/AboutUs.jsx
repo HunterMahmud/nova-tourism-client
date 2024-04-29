@@ -85,7 +85,7 @@ const AboutUs = () => {
       });
 
       // console.log('Document written with ID: ', docRef.id);
-      toast.success("Data saved to firebase.");
+      toast.success("Data saved to DataBase.");
       e.target.reset();
     } catch (error) {
       toast.error("Error occured!");
