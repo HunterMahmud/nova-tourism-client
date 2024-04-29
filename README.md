@@ -12,12 +12,10 @@
 
 1. **Navbar:**
    - Contains website name and routes to various sections.
-   - Conditional display of login, register, logout, and profile pic based on user authentication.
+   - Conditional display of login, register, logout, and profile picture based on user logged in or not.
    - Conditional display of "My List" and "Add Tourist Spot" based on user login status.
 
-   - **Sub-features:**
-     - Login and Register functionality with Firebase authentication system.
-     - Login with Google and GitHub options.
+   
 
 2. **Login Page:**
    - Email and password-based login with Firebase authentication.
@@ -25,11 +23,12 @@
 
 3. **Register Page:**
    - Registration form with email, name, photoURL, and password fields.
-   - Password validation with regex for complexity.
+   - Password validation with RegEx for complexity.
+   - Checking min 6 length of character at least one uppercase and lowercase character.
 
 4. **Home Page:**
-   - Includes navbar, slider, tourist spots section, countries section, travel spot gallery, and testimonials.
-   - Footer present.
+   - Includes navbar, slider, tourist spots section, countries section, travel spot gallery, and What people says.
+   
 
 5. **Add Tourist Spot Page:**
    - Private route accessible after login.
@@ -39,7 +38,7 @@
 6. **All Tourist Spot Page:**
    - Displays tourist spots added by users in card format.
    - Dropdown menu for sorting based on average cost.
-   - Private route.
+   - Private route accessible after login.
 
 7. **View Details Page:**
    - Private/protected route displaying details of a tourist spot.
@@ -47,10 +46,11 @@
 8. **My List Page:**
    - Private/protected route displaying user-added spots in a tabular format.
    - Options for spot deletion and update.
+   - Delete button show a confirmation message after delete.
 
 9. **Update Page:**
-   - Form for updating tourist spot details.
-   - Private route.
+   - Private route Form for updating tourist spot details.
+
 
 10. **Footer and Navbar:**
     - Persistent across all pages except 404 page.
@@ -63,10 +63,10 @@
 
 13. **Countries Section:**
     - Displays information about 6 countries in card format.
-    - Clicking on a country card shows tourist spots of that country.
+    - Clicking on a country card shows tourist spots of that specific country.
 
 14. **Dark and Light Theme:**
-    - Toggle button for user preference.
+    - Toggle button for light and dark mode for user preference.
 
 15. **Dynamic Title and Scroll Restoration:**
     - Enhancements for better user experience.
