@@ -86,6 +86,32 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div
+            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://source.unsplash.com/people-walking-on-park-near-trees-and-building-during-daytime-gt3gK_Wob2g")] bg-center bg-no-repeat`}
+          ></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div
+            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://source.unsplash.com/green-rice-field--2WlTWZLnRc")] bg-center bg-no-repeat`}
+          ></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div
+            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://source.unsplash.com/tow-boats-on-body-of-water-vrmumizr3B0")] bg-center bg-no-repeat`}
+          ></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div
+            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://source.unsplash.com/calm-body-of-water-near-mountais-maJ7hJBE654")] bg-center bg-no-repeat`}
+          ></div>
+          
+        </SwiperSlide>
+        <SwiperSlide>
+          <div
+            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://source.unsplash.com/aerial-view-of-city-at-daytime-9r2yeRccyls")] bg-center bg-no-repeat`}
+          ></div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div
             className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://source.unsplash.com/green-trees-and-green-grass-during-daytime-RSIBHeDjKeQ")] bg-center bg-no-repeat`}
           ></div>
         </SwiperSlide>

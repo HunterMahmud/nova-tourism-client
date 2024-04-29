@@ -23,12 +23,12 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink className="text-lg" to="/">
+        <NavLink className="text-base sm:text-lg lg:text-sm" to="/">
           Home
         </NavLink>
       </li>
       <li>
-        <NavLink className="text-lg" to="/allspot">
+        <NavLink className="text-base sm:text-lg lg:text-sm" to="/allspot">
           All Tourist Spot
         </NavLink>
       </li>
@@ -36,31 +36,26 @@ const Navbar = () => {
       {user && (
         <>
           <li>
-            <NavLink className="text-lg" to="/addspot">
+            <NavLink className="text-base sm:text-lg lg:text-sm" to="/addspot">
               Add Tourist Spot
             </NavLink>
           </li>
           <li>
-            <NavLink className="text-lg" to="/mylist">
+            <NavLink className="text-base sm:text-lg lg:text-sm" to="/mylist">
               My List
             </NavLink>
           </li>
         </>
       )}
       <li>
-        <NavLink className="text-lg" to="/aboutus">
+        <NavLink className="text-base sm:text-lg lg:text-sm" to="/aboutus">
           About Us
         </NavLink>
       </li>
       {!user && (
         <>
           <li>
-            <NavLink className="text-lg" to="/login">
-              Login
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className="text-lg" to="/register">
+            <NavLink className="text-base sm:text-lg lg:text-base" to="/register">
               Register
             </NavLink>
           </li>
@@ -102,7 +97,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-20 p-2 shadow bg-base-100 rounded-box w-52 font-bugrasimo"
+              className="menu menu-sm dropdown-content mt-3 z-20 p-2 shadow text-gray-800 bg-gray-100 dark:bg-gray-800 dark:text-gray-100 rounded-box w-52 font-bugrasimo"
             >
               {links}
             </ul>

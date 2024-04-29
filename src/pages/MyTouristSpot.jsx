@@ -1,18 +1,20 @@
 import React, { useEffect } from "react";
 import { MdDeleteForever } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, ScrollRestoration } from "react-router-dom";
 import contextProvider from "./../components/contextProvider";
 import { Tooltip } from "react-tooltip";
 import axios from "axios";
 import { useState } from "react";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const MyTouristSpot = () => {
   const [mySpotData, setMySpotData] = useState([]);
   const [refetch, setRefetch] = useState(true);
   const { user} = contextProvider();
   const [loading, setLoading ] = useState(true);
+  
 
   useEffect(() => {
     setLoading(true);
@@ -36,6 +38,7 @@ const MyTouristSpot = () => {
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!",
+      
     }).then((result) => {
       if (result.isConfirmed) {
         axios.delete(`https://nova-tourism-server.vercel.app/deleteSpot/${id}`).then((res) => {
@@ -62,6 +65,10 @@ const MyTouristSpot = () => {
   }
   return (
     <div>
+      <Helmet>
+        <title>My Tourist Spot | Nova Travel</title>
+      </Helmet>
+      <ScrollRestoration />
       <div className=" max-w-7xl p-2 mx-auto sm:p-4 text-gray-100 dark:text-gray-800">
         <h1
           data-aos="fade-down"
@@ -72,7 +79,7 @@ const MyTouristSpot = () => {
         <p className="text-center text-gray-800 dark:text-gray-200">All your tourist spot here.</p>
 
         <div className="overflow-x-auto mt-7">
-          <table className="min-w-full text-xs">
+          <table className="text-xs mx-auto">
             <colgroup>
               <col />
               <col />
