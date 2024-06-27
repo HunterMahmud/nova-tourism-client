@@ -33,19 +33,24 @@ const ICON = icon({
 //   Cambodia:
 //     "Witness Angkor Wat's majestic temples, shop at Siem Reap's night market, and relax on Sihanoukville's beaches.",
 // };
+
+
+
+
+
 // const photos = {
 //   Bangladesh:
-//     "https://source.unsplash.com/black-boat-on-sea-shore-during-daytime-Ph5VL5Tilto",
+//     "https://i.ibb.co/yQyM9zC/country1.jpg",
 //   Thailand:
-//     "https://source.unsplash.com/five-brown-wooden-boats-jWKk-0ZBUyg",
+//     "https://i.ibb.co/p2Z6gR0/country2.jpg",
 //   Indonesia:
-//     "https://source.unsplash.com/aerial-photography-of-rice-terraces-during-daytime-XEhchWQuWyM",
+//     "https://i.ibb.co/BcR6hTC/country3.jpg",
 //   Malaysia:
-//     "https://source.unsplash.com/architectural-photography-of-lighted-city-buildings-N2SKNqLcgr0",
+//     "https://i.ibb.co/PDwgbx7/country4.jpg",
 //   Vietnam:
-//     "https://source.unsplash.com/aerial-view-of-city-at-daytime-9r2yeRccyls",
+//     "https://i.ibb.co/ng5z1PV/banner6.jpg",
 //   Cambodia:
-//     "https://source.unsplash.com/angkor-wat-temple-cambodia-iconic-landmark-with-reflection-in-water-LN17dtIsN7o",
+//     "https://i.ibb.co/k08WqFD/country5.jpg",
 // };
 
 const AboutUs = () => {
@@ -98,7 +103,7 @@ const AboutUs = () => {
       </Helmet>
 
       <ScrollRestoration />
-      <div className=" flex flex-col items-center justify-center h-[300px]  object-cover bg-cover bg-[linear-gradient(45deg,rgba(0,0,0,0.5),rgba(0,0,0,0)),url('https://source.unsplash.com/three-brown-wooden-boat-on-blue-lake-water-taken-at-daytime-T7K4aEPoGGk')] bg-center bg-no-repeat">
+      <div className=" flex flex-col items-center justify-center h-[300px]  object-cover bg-cover bg-[linear-gradient(45deg,rgba(0,0,0,0.5),rgba(0,0,0,0)),url('https://i.ibb.co/LQJyYDZ/aboutus.jpg')] bg-center bg-no-repeat">
         <h2
           data-aos="fade-down"
           className="text-2xl sm:text-4xl lg:text-5xl font-bugrasimo text-white dark:text-gray-200"

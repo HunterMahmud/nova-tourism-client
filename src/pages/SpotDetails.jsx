@@ -44,7 +44,7 @@ const SpotDetails = () => {
       </Helmet>
 
       <ScrollRestoration />
-      <div className="flex flex-col items-center justify-center h-[150px] sm:h-[300px] object-cover bg-cover bg-[linear-gradient(45deg,rgba(0,0,0,0.5),rgba(0,0,0,0)),url('https://source.unsplash.com/brown-wooden-boat-moving-towards-the-mountain-O453M2Liufs')] bg-center bg-no-repeat">
+      <div className="flex flex-col items-center justify-center h-[150px] sm:h-[300px] object-cover bg-cover bg-[linear-gradient(45deg,rgba(0,0,0,0.5),rgba(0,0,0,0)),url('https://i.ibb.co/qjryrqM/details.jpg')] bg-center bg-no-repeat">
         <h2
           data-aos="fade-down"
           className="text-2xl sm:text-3xl lg:text-5xl text-white font-bugrasimo capitalize"

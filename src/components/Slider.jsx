@@ -79,55 +79,65 @@ const Slider = () => {
         autoplay={true}
         className="mySwiper"
       >
+
+
+
+
+
+
+
+
+
+
         <SwiperSlide>
           <div
-            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://source.unsplash.com/green-trees-on-mountain-under-white-clouds-during-daytime-_vL6mbbHZkI")] bg-center bg-no-repeat`}
+            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://i.ibb.co/5BPQzyV/banner1.jpg")] bg-center bg-no-repeat`}
           ></div>
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://source.unsplash.com/people-walking-on-park-near-trees-and-building-during-daytime-gt3gK_Wob2g")] bg-center bg-no-repeat`}
+            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://i.ibb.co/tXTtFVs/banner2.jpg")] bg-center bg-no-repeat`}
           ></div>
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://source.unsplash.com/green-rice-field--2WlTWZLnRc")] bg-center bg-no-repeat`}
+            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://i.ibb.co/xf2bknc/banner3.jpg")] bg-center bg-no-repeat`}
           ></div>
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://source.unsplash.com/tow-boats-on-body-of-water-vrmumizr3B0")] bg-center bg-no-repeat`}
+            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://i.ibb.co/NmdZ2TF/banner4.jpg")] bg-center bg-no-repeat`}
           ></div>
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://source.unsplash.com/calm-body-of-water-near-mountais-maJ7hJBE654")] bg-center bg-no-repeat`}
+            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://i.ibb.co/Zf7LKG2/banner5.jpg")] bg-center bg-no-repeat`}
           ></div>
           
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://source.unsplash.com/aerial-view-of-city-at-daytime-9r2yeRccyls")] bg-center bg-no-repeat`}
+            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://i.ibb.co/ng5z1PV/banner6.jpg")] bg-center bg-no-repeat`}
           ></div>
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://source.unsplash.com/green-trees-and-green-grass-during-daytime-RSIBHeDjKeQ")] bg-center bg-no-repeat`}
+            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://i.ibb.co/zr0qDZm/banner7.jpg")] bg-center bg-no-repeat`}
           ></div>
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://source.unsplash.com/blue-and-white-boat-on-sea-under-blue-sky-during-daytime-fUrrQ4y-ENI")] bg-center bg-no-repeat`}
+            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://i.ibb.co/F6hWd2y/banner8.jpg")] bg-center bg-no-repeat`}
           ></div>
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://source.unsplash.com/person-surfing-on-sea-during-daytime-HfcyrSsA51E")] bg-center bg-no-repeat`}
+            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://i.ibb.co/PD3zNkK/banner9.jpg")] bg-center bg-no-repeat`}
           ></div>
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://source.unsplash.com/brown-and-white-deer-during-daytime-v6A4nXxqkFo")] bg-center bg-no-repeat`}
+            className={`relative flex items-center justify-left h-[80vh] object-cover bg-cover bg-[linear-gradient(45deg,rgba(3,7,18,0.5),rgba(3,7,18,0)),url("https://i.ibb.co/yhHttnx/banner10.jpg")] bg-center bg-no-repeat`}
           ></div>
         </SwiperSlide>
       </Swiper>

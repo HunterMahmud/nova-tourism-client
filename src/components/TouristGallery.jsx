@@ -34,39 +34,43 @@ const TouristGallery = () => {
             className="mySwiper"
             autoplay={true}
           >
+
+
+
+
             <SwiperSlide>
-             <img className="w-full h-[300px] sm:h-[400px]" src="https://source.unsplash.com/brown-boat-on-sea-shore-during-daytime-dqE0_ZUegO8" alt="" />
+             <img className="w-full h-[300px] sm:h-[400px]" src="https://i.ibb.co/McLRd6g/coxs-bazar.jpg" alt="" />
              
             </SwiperSlide>
             <SwiperSlide>
-             <img className="w-full h-[300px] sm:h-[400px]" src="https://source.unsplash.com/white-boat-on-sea-near-green-and-brown-mountain-during-daytime-nFLhhAxN1EE" alt="" />
+             <img className="w-full h-[300px] sm:h-[400px]" src="https://i.ibb.co/qnsfFVZ/spot1.jpg" alt="" />
              
             </SwiperSlide>
             <SwiperSlide>
-             <img className="w-full h-[300px] sm:h-[400px]" src="https://source.unsplash.com/orange-temples-during-daytime-B64B6-kAWlw" alt="" />
+             <img className="w-full h-[300px] sm:h-[400px]" src="https://i.ibb.co/f1c4Rzg/spot2.jpg" alt="" />
              
             </SwiperSlide>
           
             <SwiperSlide>
               {" "}
-              <div className="w-full h-[300px] sm:h-[400px] object-cover bg-cover bg-[url('https://source.unsplash.com/island-under-white-sky-exFdOWkYBQw')] bg-center bg-no-repeat"></div>
+              <div className="w-full h-[300px] sm:h-[400px] object-cover bg-cover bg-[url('https://i.ibb.co/z8Lbf1P/spot3.jpg')] bg-center bg-no-repeat"></div>
             </SwiperSlide>
           
             <SwiperSlide>
               {" "}
-              <div className="w-full h-[300px] sm:h-[400px] object-cover bg-cover bg-[url('https://source.unsplash.com/the-shah-alam-captured-during-sunset-malaysia-3d2QsZFcT0w')] bg-center bg-no-repeat"></div>
+              <div className="w-full h-[300px] sm:h-[400px] object-cover bg-cover bg-[url('https://i.ibb.co/6W7HkQd/spot4.jpg')] bg-center bg-no-repeat"></div>
             </SwiperSlide>
             <SwiperSlide>
               {" "}
-              <div className="w-full h-[300px] sm:h-[400px] object-cover bg-cover bg-[url('https://source.unsplash.com/tow-boats-on-body-of-water-vrmumizr3B0')] bg-center bg-no-repeat"></div>
+              <div className="w-full h-[300px] sm:h-[400px] object-cover bg-cover bg-[url('https://i.ibb.co/NmdZ2TF/banner4.jpg')] bg-center bg-no-repeat"></div>
             </SwiperSlide>
             <SwiperSlide>
               {" "}
-              <div className="w-full h-[300px] sm:h-[400px] object-cover bg-cover bg-[url('https://source.unsplash.com/a-close-up-of-a-cave-m2oc3vTO84k')] bg-center bg-no-repeat"></div>
+              <div className="w-full h-[300px] sm:h-[400px] object-cover bg-cover bg-[url('https://i.ibb.co/MMDP31S/spot5.jpg')] bg-center bg-no-repeat"></div>
             </SwiperSlide>
             <SwiperSlide>
               {" "}
-              <div className="w-full h-[300px] sm:h-[400px] object-cover bg-cover bg-[url('https://source.unsplash.com/people-walking-on-park-near-trees-and-building-during-daytime-gt3gK_Wob2g')] bg-center bg-no-repeat"></div>
+              <div className="w-full h-[300px] sm:h-[400px] object-cover bg-cover bg-[url('https://i.ibb.co/tXTtFVs/banner2.jpg')] bg-center bg-no-repeat"></div>
             </SwiperSlide>
           </Swiper>
         </div>

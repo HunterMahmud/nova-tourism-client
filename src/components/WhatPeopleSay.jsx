@@ -27,7 +27,7 @@ const WhatPeopleSay = () => {
               </p>
               <div className="flex items-center mt-8 space-x-4">
                 <img
-                  src="https://source.unsplash.com/man-wearing-green-polo-shirt-6anudmpILw4"
+                  src="https://i.ibb.co/4ZCCJMn/about4.jpg"
                   alt=""
                   className="w-10 h-10 rounded-full bg-card"
                 />
@@ -49,7 +49,7 @@ const WhatPeopleSay = () => {
               </p>
               <div className="flex items-center mt-8 space-x-4">
                 <img
-                  src="https://source.unsplash.com/man-wearing-black-and-white-top-7omHUGhhmZ0"
+                  src="https://i.ibb.co/fXjycnb/about3.jpg"
                   alt=""
                   className="w-10 h-10 rounded-full bg-card"
                 />
@@ -71,7 +71,7 @@ const WhatPeopleSay = () => {
               </p>
               <div className="flex items-center mt-8 space-x-4">
                 <img
-                  src="https://source.unsplash.com/a-man-in-a-yellow-shirt-smiling-at-the-camera-ZjDbRtR_BcE"
+                  src="https://i.ibb.co/F4tYV3v/about2.jpg"
                   alt=""
                   className="w-10 h-10 rounded-full bg-card"
                 />
